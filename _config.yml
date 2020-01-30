@@ -6,20 +6,20 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: Edit _config.yml to set your title!
-description: This is where the description of your site will go. You should change it by editing the _config.yml file. It can be as long as you like! Happy blogging... ❤
-github_username: jph00
+title: Data Science in the Grid 
+description: This is the blog of a DS working in the energy sector, more precisely in a Norwegian grid company.
+github_username: chrcoello
 
 # Email and twitter are optional:
-email: 
-twitter_username: 
+email: christopher.coello@gmail.com
+twitter_username: @ChrCoello
 
 # OPTIONAL: override baseurl and url if using a custom domain
 #url:  the base hostname & protocol for your site, e.g. http://example.com
 #baseurl: the subpath of your site, e.g. /blog
 
 # Set this to true to get LaTeX math equation support
-use_math: 
+use_math: True
 
 # Add your Google Analytics ID here if you have one and want to use it
 google_analytics:
