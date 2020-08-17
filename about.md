@@ -7,6 +7,5 @@ On a personal level, I live in a farm with my familiy outside Hamar, Norway. I a
 <img src="images/47962604.jpg" width="600" alt="Arrival Templiers">
 </p> 
 
-![](images/47962604.jpg "Arrival Templiers")
 
 
