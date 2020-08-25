@@ -19,6 +19,8 @@
   color: light-grey;
 }
 
+.post td {font-size: .8rem;}
+
 .language-python { border-left: 1px solid lightcoral; }
 
 .language-python + .language-plaintext {
@@ -60,11 +62,4 @@
 
 .codecell table { width: auto;}
 
-.td {
-        font-size: 2px;
-      }
-
-.th {
-        font-size: 2px;
-      }
 
