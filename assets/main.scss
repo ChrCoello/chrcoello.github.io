@@ -19,7 +19,13 @@
   color: light-grey;
 }
 
-.post td,th {font-size: .8rem;width: auto;}
+.post td {
+        font-size: .8rem;
+}
+
+.post th {
+        font-size: .8rem;
+}
 
 .language-python { border-left: 1px solid lightcoral; }
 
