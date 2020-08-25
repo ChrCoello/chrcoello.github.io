@@ -27,6 +27,10 @@
         font-size: .8rem;
 }
 
+.post table {
+        border-collapse: collapse;
+}
+
 .language-python { border-left: 1px solid lightcoral; }
 
 .language-python + .language-plaintext {
