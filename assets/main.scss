@@ -20,11 +20,16 @@
 }
 
 .post td {
-        font-size: .8rem;
+        font-size: .7rem;
 }
 
 .post th {
-        font-size: .8rem;
+        font-size: .7rem;
+}
+
+.post table {
+        border-collapse: collapse;
+        width: auto;
 }
 
 .post table {
