@@ -17,13 +17,13 @@ This load is what we are interested in forecasting. Several potential short- and
 
 In our case, we were interested in showing the technical feasibility of forecasting load at almost the finest granularity of an electricity grid network. By experience, we know that forecasting country level load is easier than forecasting end user level load, and therefore wanted to tackle the *hardest* use case for a DSO.
 
-<img src="/images/2020-08-31-dssc/forecast_substation.svg" width="800" class="center" alt="Forecast substation">
+<img src="/images/2020-08-28-summer-camp/forecast_substation.svg" width="800" class="center" alt="Forecast substation">
 <figcaption>Figure 1. Schematic of the structure of the low voltage grid in Elvia. The timeseries represent the aggregated load over all the end users in one TF over a two-year period.</figcaption>
 
 Forecasting the load of one TF is of course interesting. But we identified very early the need to address all TF, not just one. As a consequence, we understood very early that having 25'000 models in production was not desirable. In addition, as shown in *Figure 1* with `tr1` and `tr2`, substations with similar type of end user present similar load patterns. With both this in mind, the students investigated a method to reduce the amount of models using these load similarities.  
 Clustering similar substations based on either existing labels or purely based on data was then added before  forecasting so that we need K models (where K is the number of models) instead of N models (where N is the number of substations). A schematic of the workflow we had set up for this summer camp can be seen in *Figure 2* : pre-processing, clustering and forecasting.
 
-<img src="/images/2020-08-31-dssc/forecast_substation_workflow_woOpt.svg" width="800" class="center" alt="Schematic workflow">
+<img src="/images/2020-08-28-summer-camp/forecast_substation_workflow_woOpt.svg" width="800" class="center" alt="Schematic workflow">
 <figcaption>Figure 2. Schematic and modules addressed during the summer camp</figcaption>
 
 ## Pre-processing
@@ -66,7 +66,7 @@ This is the easiest to understand: each substation is assigned to its cluster ba
 The advantage of this method is that it is easy to implement, computationally inexpensive, and you don't have to define a temporal period where you define a consumption pattern (daily, weekly, monthly, yearly, etc...) prior to the clustering.  
 But the main disadvantage is that the sector-label for each substation is derived from sector-labels for end-users which are manually entered in the database and there are prone to errors or changes (the famous kingdom of *dirty* data). Concrete example seen: a nursery that is registered as household. This could potentially mislabel substation, and therefore make the clusters less homogeneous. In addition, this method limits the number of cluster `K` to the existing number of sector-labels.
 
-<img src="/images/2020-08-31-dssc/label_based_cluster.svg" width="800" class="center" alt="Label based clusters">  
+<img src="/images/2020-08-28-summer-camp/label_based_cluster.svg" width="800" class="center" alt="Label based clusters">  
 <figcaption> Figure 3. Label-based clustering for label house (top,left), cabin (top,right), industry (bottom,left) and the three centroids (bottom,right). Thin colored lines represent the weekly average of each individual substation member of the cluster and the black lines are the cluster centroid.</figcaption> 
 
 ### Data-driven clustering
@@ -75,20 +75,20 @@ In the purely data-driven cluster, the algorithm (K-Means, K-Shape, Hierarchical
 I would emphasize more about the choices made during this summer camp. First, we decided to standardize the z-transformed load timeseries by generating a weekly average of the whole historical period accessible for each TF. We then obtained a 168 data points per TF, the first point of this new representation of the data being for example the average of all Mondays at 01:00 that exist in the whole historical period.  
 The choice of using week instead of day or month is rather related to the consumption patterns in households, industries and even more cabins.
 
-<img src="/images/2020-08-31-dssc/data_driven_cluster.png" width="800" class="center" alt="Label based clusters">  
+<img src="/images/2020-08-28-summer-camp/data_driven_cluster.png" width="800" class="center" alt="Label based clusters">  
 <figcaption>Figure 4. Data-driven clustering obtained using K-means with `K=3` (top) and `K=6` (bottom).</figcaption>  
 
 When clustering the data using K=3 and the K-means algorithm, the cluster generated are very similar to the clusters to the one obtained in the label-driven clusters (*Figure 4*).
 Interestingly, we see that the optimal number of cluster based on the elbow method with the distorsion metric is 3 (*Figure 5, left*), but we also see that the "elbow" is very smooth and that changing metric (*Figure 5, right*) makes the optimal nunber cluster not possible to detected. .  
 
-<img src="/images/2020-08-31-dssc/data_driven_cluster_elbow.png" width="600" class="center" alt="Label based clusters">  
+<img src="/images/2020-08-28-summer-camp/data_driven_cluster_elbow.png" width="600" class="center" alt="Label based clusters">  
 <figcaption>Figure 5. Search of the optimal number of clusters using the elbow method with the distorsion score (left) and the Calinski Harabasz score (right).</figcaption> 
 
 The advantage of these data-driven methods are that the number of cluster *K* is a hyper-parameter that the user can set prior to running the algorithm. This is essential to study more in detail how reducing the number of forecasting models by means of clustering influences the forecasting accuracy. Very early, the tradeoff (*Figure 6*) between number of models and accuracy was identified by thinking about the extreme cases:  
  - `K=N`: one model per substation, too many models but best forecasting accuracy
  - `K=1`: one model for all substations, ideal scenario in term of number of models, but loss in forecasting accuracy
 
-<img src="/images/2020-08-31-dssc/tradeoff.png" width="400" class="center" alt="Tradeoff"> 
+<img src="/images/2020-08-28-summer-camp/tradeoff.png" width="400" class="center" alt="Tradeoff"> 
 <figcaption>Figure 6. Tradeoff between the number of forecasting models trained and the accuracy of the forecast</figcaption>
 
 
@@ -160,7 +160,7 @@ To make it easy to read, we chose two substations of each sector studied (*house
 
 In this case, we have optimized each model's hyperparameters by using cross-validation method. It is observed that default hyperparameters for CatBoost were already very close to the optimal set of hyperparameters obtained at the end of the lengthy CV run.
 
-<img src="/images/2020-08-31-dssc/forecast_six_use_case.svg" width="800" class="center" alt="Forecast per substation with one model per substation"> 
+<img src="/images/2020-08-28-summer-camp/forecast_six_use_case.svg" width="800" class="center" alt="Forecast per substation with one model per substation"> 
 <figcaption>Figure 7. Comparing models when predicting six different substations. Each subplot shows the predicted load of each model and the true load (black) for one forecast horizon (67 hours).</figcaption>
 
 **TODO COMMENT FIGURE 7**
@@ -204,12 +204,12 @@ As we increase the number of clusters K, we rightly observed that the cluster si
 This was our first deep dive into forecasting problems at Elvia. We have now an idea about the possibilities, the possible accuracy of the short-horizon forecasts we could provide to our domain experts sitting at the control centre. The students have done a tremendous job into setting up what will be our reference pipeline to quickly customized future forecasting problems. 
 The normal continuation of this project would be to optimise the number of cluster and the accuracy of the models at the same time to find a sweet spot where both K and accuracy are optimized simultaneously.  
 
-<img src="/images/2020-08-31-dssc/forecast_substation_workflow.svg" width="400" class="center" alt="Tradeoff">
+<img src="/images/2020-08-28-summer-camp/forecast_substation_workflow.svg" width="400" class="center" alt="Tradeoff">
 <figcaption>Figure 8</figcaption>
 
 One step further, the problem of learning in deep learning (DL) is cast as a search or optimization problem to navigate the space of possible sets of weights the model may use in order to make good enough predictions. This optimization is coded in the loss function of the DL framework. So we might think that with an appropriate DL architecture and loss function, one could simplify the problem to one DL model. This idea is rather attractive, and further investigation of its potential implementation is being discussed together with the [ML group](https://machine-learning.uit.no/) in Tromsø.  
 
-<img src="/images/2020-08-31-dssc/forecast_substation_workflow_DL.svg" width="400" class="center" alt="Tradeoff">  
+<img src="/images/2020-08-28-summer-camp/forecast_substation_workflow_DL.svg" width="400" class="center" alt="Tradeoff">  
 <figcaption>Figure 9</figcaption>
 
 Last but not least, I would like to thank the four students for their amazing contribution during these two months, where team work was reduced to discussion over the Internet and some very few (but intense and constructive) physical meetings over the whiteboard.
