@@ -1,4 +1,4 @@
-<img src="/images/Lillehammer_DJI_0004_1.jpg" width="800" class="center" alt="Grid and Data">
+<img src="/images/Lillehammer_DJI_0004_1_800x600.jpg" width="800" class="center" alt="Grid and Data">
 
 # When data meets the grid
 
