@@ -157,7 +157,7 @@ To make it easy to read, we chose two substations of each sector studied (*house
 
 In this case, we have optimized each model's hyperparameters by using cross-validation method. We interestingly observed that default hyperparameters for CatBoost were already very close to the optimal set of hyperparameters obtained at the end of the lengthy CV run.
 
-<img src="/images/2020-08-28-summer-camp/forecast_house_case.svg" width="800" class="center" alt="Forecast house substation with one model per substation"> 
+<img src="/images/2020-08-28-summer-camp/forecast_house_use_case.svg" width="800" class="center" alt="Forecast house substation with one model per substation"> 
 <figcaption>Figure 7a. Comparing models when predicting two substations with sector-label **House** for one forecast horizon (67 hours).</figcaption><br/>
 
 In *Figure 7*, we can visually assess the performance of the four models when predicting one forecast horizon (67 hours) for six individual substations. A general impression, confirmed by the quantitative assessment in *Table 2.*, is that the three tree-based models perform rather similarly, succeeding in predicting the household and industry substations, but having some problems with the cabin ones.  
