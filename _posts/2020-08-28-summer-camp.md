@@ -1,6 +1,6 @@
 # Load forecasting at the secondary substation level
 
-At [Elvia](https://www.elvia.no/), Norway's biggest distribution operators system in Norway, we had the chance to host our first Data Science Summer Camp. Four students (Anne Willkommen Eiken, Chanjei Vasanthan, Jonas Nagell Borgersen and Kaia Idun Bonnet) were gathered from the 15th of June to the 15th of August to work as a group on one topic, within the limits authorized by the health authorities. [Gard Støe](https://www.linkedin.com/in/gardstoe/), at the origin of this initiative, and [myself](https://www.linkedin.com/in/chrcoello/) decided to propose four use cases of interest for the company, and the students picked up one to work on in the next 8 weeks.
+At [Elvia](https://www.elvia.no/), Norway's biggest distribution operators system in Norway, we had the chance to host our first Data Science Summer Camp. Four students (Anne Willkommen Eiken, Chanjei Vasanthan, Jonas Nagell Borgersen and Kaia Idun Bonnet) were gathered from the 15th of June to the 15th of August to work as a group on one topic, within the limits authorized by the health authorities. [Gard Støe](https://www.linkedin.com/in/gardstoe/), at the origin of this initiative, and [myself](https://www.linkedin.com/in/chrcoello/). This blog entry presents the results of these 8 weeks of work
 
 Table of content:
 
@@ -202,15 +202,15 @@ As we increase the number of clusters K, we rightly observed that the cluster si
 
 ## Discussion
 This was our first deep dive into forecasting problems at Elvia. We have now an idea about the possibilities, the possible accuracy of the short-horizon forecasts we could provide to our domain experts sitting at the control centre. The students have done a tremendous job into setting up what will be our reference pipeline to quickly customized future forecasting problems. 
-The normal continuation of this project would be to optimise the number of cluster and the accuracy of the models at the same time to find a sweet spot where both K and accuracy are optimized simultaneously.  
+The normal continuation of this project would be to optimise the number of cluster and the accuracy of the models at the same time to find a sweet spot where both K and accuracy are optimized simultaneously (*Figure 8*).  
 
 <img src="/images/2020-08-28-summer-camp/forecast_substation_workflow.svg" width="400" class="center" alt="Tradeoff">
-<figcaption>Figure 8</figcaption>
+<figcaption>Figure 8. Optimization loop where both the number of models K and and the accuracy are optimized simultaneously</figcaption>
 
 One step further, the problem of learning in deep learning (DL) is cast as a search or optimization problem to navigate the space of possible sets of weights the model may use in order to make good enough predictions. This optimization is coded in the loss function of the DL framework. So we might think that with an appropriate DL architecture and loss function, one could simplify the problem to one DL model. This idea is rather attractive, and further investigation of its potential implementation is being discussed together with the [ML group](https://machine-learning.uit.no/) in Tromsø.  
 
 <img src="/images/2020-08-28-summer-camp/forecast_substation_workflow_DL.svg" width="400" class="center" alt="Tradeoff">  
-<figcaption>Figure 9</figcaption>
+<figcaption>Figure 9. Could deep learning help to simplify the problem by  integrating the optimisation within the loss function ? </figcaption>
 
 Last but not least, I would like to thank the four students for their amazing contribution during these two months, where team work was reduced to discussion over the Internet and some very few (but intense and constructive) physical meetings over the whiteboard.
 
