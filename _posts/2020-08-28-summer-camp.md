@@ -81,7 +81,7 @@ The choice of using week instead of day or month is rather related to the consum
 When clustering the data using K=3 and the K-means algorithm, the cluster generated are very similar to the clusters to the one obtained in the label-driven clusters (*Figure 4*).
 Interestingly, we see that the optimal number of cluster based on the elbow method with the distortion metric is 3 (*Figure 5, left*), but we also see that the "elbow" is very smooth and that changing metric (*Figure 5, right*) makes the optimal number cluster not possible to detected. .  
 
-<img src="/images/2020-08-28-summer-camp/data_driven_cluster_elbow.png" width="600" class="center" alt="Label based clusters">  
+<img src="/images/2020-08-28-summer-camp/data_driven_cluster_elbow.png" width="800" class="center" alt="Label based clusters">  
 <figcaption>Figure 5. Search of the optimal number of clusters using the elbow method with the distortion score (left) and the Calinski-Harabasz score (right). The elbow was found at K=3 with the distortion score. Note the smoothness of both score curves, showing no obvious optimal choice for K.</figcaption> 
 
 The advantage of these data-driven methods are that the number of cluster *K* is a hyper-parameter that the user can set prior to running the algorithm. This is essential to study more in detail how reducing the number of forecasting models by means of clustering influences the forecasting accuracy. Very early, the tradeoff (*Figure 6*) between number of models and accuracy was identified by thinking about the extreme cases:  
