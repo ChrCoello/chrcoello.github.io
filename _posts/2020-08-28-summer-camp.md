@@ -158,13 +158,15 @@ To make it easy to read, we chose two substations of each sector studied (*house
 
 #### Case 1. Predicting using one model per NS
 
-In this case, we have optimized each model's hyperparameters by using cross-validation method. It is observed that default hyperparameters for CatBoost were already very close to the optimal set of hyperparameters obtained at the end of the lengthy CV run.
+In this case, we have optimized each model's hyperparameters by using cross-validation method. We interestingly observed that default hyperparameters for CatBoost were already very close to the optimal set of hyperparameters obtained at the end of the lengthy CV run.
 
 <img src="/images/2020-08-28-summer-camp/forecast_six_use_case.svg" width="800" class="center" alt="Forecast per substation with one model per substation"> 
 <figcaption>Figure 7. Comparing models when predicting six different substations. Each subplot shows the predicted load of each model and the true load (black) for one forecast horizon (67 hours).</figcaption>
 
-**TODO COMMENT FIGURE 7**
+In *Figure 7*, we can visually assess the performance of the four models when predicting one forecast horizon (67 hours) for six individual substations. A general impression, confirmed by the quantitative assessment in *Table 2.*, is that the three tree-based models perform rather similarly, succeeding in predicting the household and industry substations, but having some problems with the cabin ones.  
+If we average the 67 points of one forecast horizon, and predict 15 forecast horizons (and take the mean and std of these 15 forecast horizons), we obtain the results in *Table 2*.
 
+{:class="newtable"}
 || House 1| House 2|Cabin 1|Cabin 2| Industry 1| Industry 2|
 |----------------------------|--------------------------|--------------------------|---------------------------|----------------------------|--------------------------|--------------------------|
 |                            | Mean $\pm$ Std  | Mean $\pm$ Std  |  Mean $\pm$ Std   | Mean $\pm$ Std   | Mean $\pm$ Std  | Mean $\pm$ Std  |
@@ -182,7 +184,7 @@ There are several interesting results within Table 2:
 
 #### Case 2. Predicting using one model per cluster
 
-Now comes the interesting bit: the number of clusters K varies (30,20,15,10) and the forecast is done using the model trained using all the members of each clusters together. For the case of clarity, we only report the results with one model, CatBoost regressor. 
+Now comes the interesting bit: the number of clusters K varies (30, 20, 15 and 10) and the forecast is done using the model trained using all the members of each clusters together. For the case of clarity, we only report the results with one model, CatBoost regressor. 
 
 {:class="newtable"}
 ||  |House1|  |House2| |Cabin1| |Cabin2| |Industry1| |Industry2|
