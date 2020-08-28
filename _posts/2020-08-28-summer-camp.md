@@ -158,10 +158,13 @@ To make it easy to read, we chose two substations of each sector studied (*house
 In this case, we have optimized each model's hyperparameters by using cross-validation method. We interestingly observed that default hyperparameters for CatBoost were already very close to the optimal set of hyperparameters obtained at the end of the lengthy CV run.
 
 <img src="/images/2020-08-28-summer-camp/forecast_house_use_case.svg" width="800" class="center" alt="Forecast house substation with one model per substation"> 
-<figcaption>Figure 7a. Comparing models when predicting two substations with sector-label **House** for one forecast horizon (67 hours).</figcaption><br/>
+<figcaption>Figure 7a. Comparing models when predicting two substations with sector-label  <b>house</b> for one forecast horizon (67 hours).</figcaption><br/>
+<img src="/images/2020-08-28-summer-camp/forecast_cabin_use_case.svg" width="800" class="center" alt="Forecast cabin substation with one model per substation"> 
+<figcaption>Figure 7b. Comparing models when predicting two substations with sector-label  <b>cabin</b> for one forecast horizon (67 hours).</figcaption><br/>
+<img src="/images/2020-08-28-summer-camp/forecast_industry_use_case.svg" width="800" class="center" alt="Forecast industry substation with one model per substation"> 
+<figcaption>Figure 7c. Comparing models when predicting two substations with sector-label  <b>house</b> for one forecast horizon (67 hours).</figcaption><br/>
 
-In *Figure 7*, we can visually assess the performance of the four models when predicting one forecast horizon (67 hours) for six individual substations. A general impression, confirmed by the quantitative assessment in *Table 2.*, is that the three tree-based models perform rather similarly, succeeding in predicting the household and industry substations, but having some problems with the cabin ones.  
-If we average the 67 points of one forecast horizon, and predict 15 forecast horizons (and take the mean and std of these 15 forecast horizons), we obtain the results in *Table 2*.
+In *Figure 7*, we can visually assess the performance of the four models when predicting one forecast horizon (67 hours) for six individual substations. A general impression, confirmed by the quantitative assessment in *Table 2.*, is that the three tree-based models perform rather similarly, succeeding in predicting the household and industry substations, but having some problems with the cabin ones. Prophet prediction seems to smoother but more inaccurate than the tree-based models. If we average the 67 points of one forecast horizon, and predict 15 forecast horizons (and take the mean and std of these 15 forecast horizons), we obtain the results in *Table 2*.
 
 {:class="newtable"}
 || House 1| House 2|Cabin 1|Cabin 2| Industry 1| Industry 2|
