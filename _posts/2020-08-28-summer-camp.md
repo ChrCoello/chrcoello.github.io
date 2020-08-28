@@ -187,14 +187,14 @@ Now comes the interesting bit: the number of clusters K varies (30,20,15,10) and
 {:class="newtable"}
 ||  |House1|  |House2| |Cabin1| |Cabin2| |Industry1| |Industry2|
 |----------------------------|--------------------------|--------------------------|---------------------------|----------------------------|--------------------------|--------------------------|--------------------------|--------------------------|---------------------------|----------------------------|--------------------------|--------------------------|
-|                            | CS | Mean $\pm$ Std  | CS | Mean $\pm$ Std  |  CS| Mean $\pm$ Std  | CS | Mean $\pm$ Std   | CS | Mean $\pm$ Std  | Cluster size | Mean $\pm$ Std  |
+|                            | CS | Mean $\pm$ Std  | CS | Mean $\pm$ Std  |  CS| Mean $\pm$ Std  | CS | Mean $\pm$ Std   | CS | Mean $\pm$ Std  | CS | Mean $\pm$ Std  |
 K=10 | 80 | 4.28 $\pm$ 0.54 | 906 | 6.32 $\pm$ 1.26 | 486 | 10.36 $\pm$ 3.98 | 486 | 10.13 $\pm$ 3.02 | 131 | 6.16 $\pm$ 1.44 | 65 | 8.28 $\pm$ 3.99 |
 K=15 | 42 | 4.25 $\pm$ 0.60 | 585 | 6.33 $\pm$ 1.43 | 438 | 10.07 $\pm$ 3.59 | 438 | 10.21 $\pm$ 2.72 | 102 | 5.78 $\pm$ 1.56 | 58 | 8.08 $\pm$ 3.99 |
 K=20 | 18 | 4.03 $\pm$ 0.64 | 376 | 6.62 $\pm$ 1.81 | 354 | 10.91 $\pm$ 3.80 | 354 | 10.65 $\pm$ 2.79 | 98  | 5.95 $\pm$ 1.57 | 22 | 7.71 $\pm$ 4.08 |
 K=30 | 18 | X.XX $\pm$ X.XX | 335 | 6.81 $\pm$ 1.62 | 306 |  9.04 $\pm$ 4.86 | 231 | 11.15 $\pm$ 3.30 | 74  | 5.67 $\pm$ 1.60 | 19 | 8.06 $\pm$ 4.18 |
 K=5449 | 1 | 3.49 $\pm$ 0.33 | 1 | 6.22 $\pm$ 1.75 | 1 | 12.1 $\pm$ 7.95 | 1   | 10.59 $\pm$ 3.47 |  1  | 5.53 $\pm$ 1.65 |	 1 | 5.94 $\pm$ 2.98 |
 
-<figcaption>Table 3. Forecasting results when we increase the number of clusters. The extreme case (K=N) with one model per substation is reproduced from Table 2 in the last column for easier comparison.</figcaption>
+<figcaption>Table 3. Forecasting results when we increase the number of clusters. The extreme case (K=N) with one model per substation is reproduced from Table 2 in the last column for easier comparison. CS: Cluster size.</figcaption>
 
 As we increase the number of clusters K, we rightly observed that the cluster size diminishes. We expect that the members of each clusters are *closer* to each other, and therefore expect that the generative process that we try to model are close enough that we can use one model without big loss of accuracy. It is very interesting to note that this is not always true in the experiment we ran. Out of 6 substations, only 2 (house 1 and industry 2) show a clear decrease in accuracy from few clusters (10) to one model per substation (5449). In addition, it is also interesting to note that substation with poor forecasting accuracy with one model per substation (cabin1 and cabin2) got better accuracy when clustering. Further work should be done to understand this. One possible explanation is that the amount of data used when training one model per substation (20 months) is too limited, ahd therefore combining similar substations within the same model allows learning more complex relationships between features and output.
 
