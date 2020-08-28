@@ -67,7 +67,7 @@ The advantage of this method is that it is easy to implement, computationally in
 But the main disadvantage is that the sector-label for each substation is derived from sector-labels for end-users which are manually entered in the database and there are prone to errors or changes (the famous kingdom of *dirty* data). Concrete example seen: a nursery that is registered as household. This could potentially mislabel substation, and therefore make the clusters less homogeneous. In addition, this method limits the number of cluster `K` to the existing number of sector-labels.
 
 <img src="/images/2020-08-28-summer-camp/label_based_cluster.svg" width="800" class="center" alt="Label based clusters">  
-<figcaption> Figure 3. Label-based clustering for label house (top,left), cabin (top,right), industry (bottom,left) and the three centroids (bottom,right). Thin colored lines represent the weekly average of each individual substation member of the cluster and the black lines are the cluster centroid.</figcaption> 
+<figcaption> Figure 3. Label-based clustering for label house (top), cabin (middle), industry (bottom). Thin colored lines represent the weekly average of each individual substation member of the cluster and the black lines are the cluster centroid.</figcaption> 
 
 ### Data-driven clustering
 
