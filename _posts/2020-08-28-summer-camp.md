@@ -1,6 +1,6 @@
 # Load forecasting at the secondary substation level
 
-At [Elvia](https://www.elvia.no/), Norway's biggest distribution operators system in Norway, we had the chance to host our first Data Science Summer Camp. Four students (Anne Willkommen Eiken, Chanjei Vasanthan, Jonas Nagell Borgersen and Kaia Idun Bonnet) were gathered from the 15th of June to the 15th of August to work as a group on one topic, within the limits authorized by the health authorities. [Gard Støe](https://www.linkedin.com/in/gardstoe/), at the origin of this initiative, and [myself](https://www.linkedin.com/in/chrcoello/). This blog entry presents the results of these 8 weeks of work
+At [Elvia](https://www.elvia.no/), Norway's biggest distribution operators system, we had the chance to host our first Data Science Summer Camp. Four students (Anne Willkommen Eiken, Chanjei Vasanthan, Jonas Nagell Borgersen and Kaia Idun Bonnet) were gathered from the 15th of June to the 15th of August to work as a group on one topic, within the limits authorized by the health authorities. [Gard Støe](https://www.linkedin.com/in/gardstoe/), at the origin of this initiative, and [myself](https://www.linkedin.com/in/chrcoello/). This blog entry presents the results of these 8 weeks of work
 
 Table of content:
 
