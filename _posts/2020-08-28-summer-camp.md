@@ -34,8 +34,7 @@ z_{tr}(t) = \frac{tr(t) - \mu_{tr}}{\sigma_{tr}}
 $$ 
 where $\mu_{tr}$ and $\sigma_{tr}$ are respectively the mean and the standard deviation measured during the whole historical period. Finally, we created for each z-transformed substation load a weekly average by averaging every instance of time and day of the week in the historical period. For example, the first point of this weekly average corresponds to Monday at 01:00: this point was obtained by averaging all Mondays at 01:00 found in the historical period.  
 
-In addition to this data pre-processing, we assigned a **sector**-label to each substation. This substation sector-label is based on the sector (type) of the end-users connected to it that has the highest annual consumption. Let's look at one example:
-
+In addition to this data pre-processing, we assigned a **sector**-label to each substation. This substation sector-label is based on the sector (type) of the end-users connected to it that has the highest annual consumption. Let's look at one example: 
 
 | End-user type            |Amount|Annual consumption (kWh)|  
 |-------|-------------------------|------------------------|  
@@ -43,9 +42,7 @@ In addition to this data pre-processing, we assigned a **sector**-label to each 
 | Other                   |1     | 1230                   | 
 | Household               |6     | 47163                  |  
 
-
-
-<figcaption>Table 1. Example of end-user type in one substation. Three types of end-users are connected to this transformer. Based on the annual consumption, we assign the sector-label Industry to this substation.</figcaption>
+<figcaption>Table 1. Example of end-user type in one substation. Three types of end-users are connected to this transformer. Based on the annual consumption, we assign the sector-label Industry to this substation.</figcaption><br/>
 
 In the example of *Table 1*, the substation has 9 end-users connected to it with *Household* being the type with most end-users. But we also see that the annual consumption for the label *Industry* is higher than for *Household*, and therefore this substation will get the sector-label *Industry* attached to it.  
 
@@ -160,8 +157,8 @@ To make it easy to read, we chose two substations of each sector studied (*house
 
 In this case, we have optimized each model's hyperparameters by using cross-validation method. We interestingly observed that default hyperparameters for CatBoost were already very close to the optimal set of hyperparameters obtained at the end of the lengthy CV run.
 
-<img src="/images/2020-08-28-summer-camp/forecast_six_use_case.svg" width="800" class="center" alt="Forecast per substation with one model per substation"> 
-<figcaption>Figure 7. Comparing models when predicting six different substations. Each subplot shows the predicted load of each model and the true load (black) for one forecast horizon (67 hours).</figcaption><br/>
+<img src="/images/2020-08-28-summer-camp/forecast_house_case.svg" width="800" class="center" alt="Forecast house substation with one model per substation"> 
+<figcaption>Figure 7a. Comparing models when predicting two substations with sector-label **House** for one forecast horizon (67 hours).</figcaption><br/>
 
 In *Figure 7*, we can visually assess the performance of the four models when predicting one forecast horizon (67 hours) for six individual substations. A general impression, confirmed by the quantitative assessment in *Table 2.*, is that the three tree-based models perform rather similarly, succeeding in predicting the household and industry substations, but having some problems with the cabin ones.  
 If we average the 67 points of one forecast horizon, and predict 15 forecast horizons (and take the mean and std of these 15 forecast horizons), we obtain the results in *Table 2*.
