@@ -206,14 +206,14 @@ As we increase the number of clusters K, we rightly observed that the cluster si
 This was our first deep dive into forecasting problems at Elvia. We have now an idea about the possibilities, the possible accuracy of the short-horizon forecasts we could provide to our domain experts sitting at the control centre. The students have done a tremendous job into setting up what will be our reference pipeline to quickly customized future forecasting problems. 
 The normal continuation of this project would be to optimise the number of cluster and the accuracy of the models at the same time to find a sweet spot where both K and accuracy are optimized simultaneously (*Figure 8*).  
 
-<img src="/images/2020-08-28-summer-camp/forecast_substation_workflow.svg" width="400" class="center" alt="Tradeoff">
+<img src="/images/2020-08-28-summer-camp/forecast_substation_workflow.svg" width="600" class="center" alt="Simultaneous optimization">
 <figcaption>Figure 8. Optimization loop where both the number of models K and and the accuracy are optimized simultaneously</figcaption><br/>  
 
 When it comes to Case 3 (one model for all substation), we were confronted to technical limitations of the technology stack (Azure Blob + Jupyter Notebook in AzureML) used during the camp. When number of rows in the feature matrix is over hundred of millions, then focus on speed of execution is mandatory. [Apache Spark](https://spark.apache.org/) seems to be a good candidate for solving this, but I am sure many others exists as well.  
 
 One step further, the problem of learning in deep learning (DL) is cast as a search or optimization problem to navigate the space of possible sets of weights the model may use in order to make good enough predictions. This optimization is coded in the loss function of the DL framework. So we might think that with an appropriate DL architecture and loss function, one could simplify the problem to one DL model. This idea is rather attractive, and further investigation of its potential implementation is being discussed together with the [ML group](https://machine-learning.uit.no/) in Tromsø.  
 
-<img src="/images/2020-08-28-summer-camp/forecast_substation_workflow_DL.svg" width="400" class="center" alt="Tradeoff">  
+<img src="/images/2020-08-28-summer-camp/forecast_substation_workflow_DL.svg" width="600" class="center" alt="DL is the solution">  
 <figcaption>Figure 9. Could deep learning help to simplify the problem by  integrating the optimisation within the loss function ? </figcaption><br/>
 
 Last but not least, I would like to thank the four students for their amazing contribution during these two months, where team work was reduced to discussion over the Internet and some very few (but intense and constructive) physical meetings over the whiteboard. Please contact with me by email or on LinkedIn
@@ -221,6 +221,6 @@ Last but not least, I would like to thank the four students for their amazing co
 ## Footnotes
 
 [^1]: Stian Norheim, **Clustering of AMS-data**, Master’s thesis in Energy and Environment, NTNU. June 2020.
-[^2]: because more than 95% of substation contain only one TF, we switch between substation and transformer during this blog post
+[^2]: because more than 95% of substation contain only one transformer, we will use substation and transformer during this blog post without loss of generality.
 
 
