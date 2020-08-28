@@ -185,9 +185,9 @@ There are several interesting results within Table 2:
 Now comes the interesting bit: the number of clusters K varies (30,20,15,10) and the forecast is done using the model trained using all the members of each clusters together. For the case of clarity, we only report the results with one model, CatBoost regressor. 
 
 {:class="newtable"}
-||  House 1||  House 2|| Cabin 1|| Cabin 2|| Industry 1|| Industry 2||
+||  House1||  House2|| Cabin1|| Cabin2|| Industry1|| Industry2||
 |----------------------------|--------------------------|--------------------------|---------------------------|----------------------------|--------------------------|--------------------------|--------------------------|--------------------------|---------------------------|----------------------------|--------------------------|--------------------------|
-|                            | Cluster size | Mean $\pm$ Std  | Cluster size | Mean $\pm$ Std  |  Cluster size | Mean $\pm$ Std  | Cluster size | Mean $\pm$ Std   | Cluster size | Mean $\pm$ Std  | Cluster size | Mean $\pm$ Std  |
+|                            | CS | Mean $\pm$ Std  | CS | Mean $\pm$ Std  |  CS| Mean $\pm$ Std  | CS | Mean $\pm$ Std   | CS | Mean $\pm$ Std  | Cluster size | Mean $\pm$ Std  |
 K=10 | 80 | 4.28 $\pm$ 0.54 | 906 | 6.32 $\pm$ 1.26 | 486 | 10.36 $\pm$ 3.98 | 486 | 10.13 $\pm$ 3.02 | 131 | 6.16 $\pm$ 1.44 | 65 | 8.28 $\pm$ 3.99 |
 K=15 | 42 | 4.25 $\pm$ 0.60 | 585 | 6.33 $\pm$ 1.43 | 438 | 10.07 $\pm$ 3.59 | 438 | 10.21 $\pm$ 2.72 | 102 | 5.78 $\pm$ 1.56 | 58 | 8.08 $\pm$ 3.99 |
 K=20 | 18 | 4.03 $\pm$ 0.64 | 376 | 6.62 $\pm$ 1.81 | 354 | 10.91 $\pm$ 3.80 | 354 | 10.65 $\pm$ 2.79 | 98  | 5.95 $\pm$ 1.57 | 22 | 7.71 $\pm$ 4.08 |
@@ -212,7 +212,7 @@ One step further, the problem of learning in deep learning (DL) is cast as a sea
 <img src="/images/2020-08-28-summer-camp/forecast_substation_workflow_DL.svg" width="400" class="center" alt="Tradeoff">  
 <figcaption>Figure 9. Could deep learning help to simplify the problem by  integrating the optimisation within the loss function ? </figcaption>
 
-Last but not least, I would like to thank the four students for their amazing contribution during these two months, where team work was reduced to discussion over the Internet and some very few (but intense and constructive) physical meetings over the whiteboard.
+Last but not least, I would like to thank the four students for their amazing contribution during these two months, where team work was reduced to discussion over the Internet and some very few (but intense and constructive) physical meetings over the whiteboard. Please contact with me by email or on LinkedIn
 
 ## Footnotes
 
