@@ -79,10 +79,10 @@ The choice of using week instead of day or month is rather related to the consum
 <figcaption>Figure 4. Data-driven clustering obtained using K-means with `K=3` (top) and `K=6` (bottom).</figcaption>  
 
 When clustering the data using K=3 and the K-means algorithm, the cluster generated are very similar to the clusters to the one obtained in the label-driven clusters (*Figure 4*).
-Interestingly, we see that the optimal number of cluster based on the elbow method with the distorsion metric is 3 (*Figure 5, left*), but we also see that the "elbow" is very smooth and that changing metric (*Figure 5, right*) makes the optimal nunber cluster not possible to detected. .  
+Interestingly, we see that the optimal number of cluster based on the elbow method with the distortion metric is 3 (*Figure 5, left*), but we also see that the "elbow" is very smooth and that changing metric (*Figure 5, right*) makes the optimal number cluster not possible to detected. .  
 
 <img src="/images/2020-08-28-summer-camp/data_driven_cluster_elbow.png" width="600" class="center" alt="Label based clusters">  
-<figcaption>Figure 5. Search of the optimal number of clusters using the elbow method with the distorsion score (left) and the Calinski Harabasz score (right).</figcaption> 
+<figcaption>Figure 5. Search of the optimal number of clusters using the elbow method with the distortion score (left) and the Calinski-Harabasz score (right).</figcaption> 
 
 The advantage of these data-driven methods are that the number of cluster *K* is a hyper-parameter that the user can set prior to running the algorithm. This is essential to study more in detail how reducing the number of forecasting models by means of clustering influences the forecasting accuracy. Very early, the tradeoff (*Figure 6*) between number of models and accuracy was identified by thinking about the extreme cases:  
  - `K=N`: one model per substation, too many models but best forecasting accuracy
@@ -207,7 +207,9 @@ This was our first deep dive into forecasting problems at Elvia. We have now an 
 The normal continuation of this project would be to optimise the number of cluster and the accuracy of the models at the same time to find a sweet spot where both K and accuracy are optimized simultaneously (*Figure 8*).  
 
 <img src="/images/2020-08-28-summer-camp/forecast_substation_workflow.svg" width="400" class="center" alt="Tradeoff">
-<figcaption>Figure 8. Optimization loop where both the number of models K and and the accuracy are optimized simultaneously</figcaption>
+<figcaption>Figure 8. Optimization loop where both the number of models K and and the accuracy are optimized simultaneously</figcaption>  
+
+When it comes to Case 3 (one model for all substation), we were confronted to technical limitations of the technology stack (Azure Blob + Jupyter Notebook in AzureML) used during the camp. When number of rows in the feature matrix is over hundred of millions, then focus on speed of execution is mandatory. [Apache Spark](https://spark.apache.org/) seems to be a good candidate for solving this, but I am sure many others exists as well.  
 
 One step further, the problem of learning in deep learning (DL) is cast as a search or optimization problem to navigate the space of possible sets of weights the model may use in order to make good enough predictions. This optimization is coded in the loss function of the DL framework. So we might think that with an appropriate DL architecture and loss function, one could simplify the problem to one DL model. This idea is rather attractive, and further investigation of its potential implementation is being discussed together with the [ML group](https://machine-learning.uit.no/) in Tromsø.  
 
