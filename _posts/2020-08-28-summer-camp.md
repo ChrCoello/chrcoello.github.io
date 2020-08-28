@@ -141,10 +141,10 @@ $$
 where the MAPE (%) is expressed as:  
 
 $$
-MAPE = 100 * \frac{\sum_{t=1}^{67}\widehat{tr(t)}-tr(t)}{\sum_{t=1}^{67} tr(t)}
+MAPE = 100 * \frac{\sum_{t=1}^{67}\widetilde{tr}(t)-tr(t)}{\sum_{t=1}^{67} tr(t)}
 $$ 
 
-where $\widehat{tr(t)}$ is the model prediction at time *t* and $tr_t$ is the true value at time $t$.
+where $\widetilde{tr}(t)$ is the model prediction at time *t* and $tr_t$ is the true value at time $t$.
 
 ### Results
 
