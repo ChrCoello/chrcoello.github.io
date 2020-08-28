@@ -187,14 +187,14 @@ There are several interesting results within Table 2:
 Now comes the interesting bit: the number of clusters K varies (30, 20, 15 and 10) and the forecast is done using the model trained using all the members of each clusters together. For the case of clarity, we only report the results with one model, CatBoost regressor. 
 
 {:class="newtable"}
-||  |House1|  |House2| |Cabin1| |Cabin2| |Industry1| |Industry2|
-|----------------------------|--------------------------|--------------------------|---------------------------|----------------------------|--------------------------|--------------------------|--------------------------|--------------------------|---------------------------|----------------------------|--------------------------|--------------------------|
-|                            | CS | $\mu$ $\pm$ $\sigma$   | CS | $\mu$ $\pm$ $\sigma$   |  CS| $\mu$ $\pm$ $\sigma$   | CS | $\mu$ $\pm$ $\sigma$    | CS | $\mu$ $\pm$ $\sigma$   | CS | $\mu$ $\pm$ $\sigma$   |
-K=10 | 80 | 4.3 $\pm$ 0.54 | 906 | 6.3 $\pm$ 1.3 | 486 | 10.4 $\pm$ 4.0 | 486 | 10.1 $\pm$ 3.0 | 131 | 6.2 $\pm$ 1.4 | 65 | 8.3 $\pm$ 4.0 |
-K=15 | 42 | 4.3 $\pm$ 0.60 | 585 | 6.3 $\pm$ 1.4 | 438 | 10.1 $\pm$ 3.6 | 438 | 10.2 $\pm$ 2.7 | 102 | 5.8 $\pm$ 1.6 | 58 | 8.1 $\pm$ 4.0 |
-K=20 | 18 | 4.0 $\pm$ 0.64 | 376 | 6.6 $\pm$ 1.8 | 354 | 10.9 $\pm$ 3.8 | 354 | 10.7 $\pm$ 2.8 | 98  | 6.0 $\pm$ 1.6 | 22 | 7.7 $\pm$ 4.1 |
-K=30 | 18 | X.XX $\pm$ X.XX | 335 | 6.8 $\pm$ 1.6 | 306 |  9.0 $\pm$ 4.9 | 231 | 11.2 $\pm$ 3.3 | 74  | 5.7 $\pm$ 1.6 | 19 | 8.1 $\pm$ 4.2 |
-K=5449 | 1 | 3.5 $\pm$ 0.33 | 1 | 6.2 $\pm$ 1.8 | 1 | 12.1 $\pm$ 8.0 | 1   | 10.6 $\pm$ 3.5 |  1  | 5.5 $\pm$ 1.7 |	 1 | 5.9 $\pm$ 3.0 |
+||  House1|  House2| Cabin1| Cabin2| Industry1| Industry2|
+|----------------------------|--------------------------|--------------------------|---------------------------|----------------------------|--------------------------|--------------------------|
+|                            | $\mu$ $\pm$ $\sigma$ (CS)  | $\mu$ $\pm$ $\sigma$ (CS)   |  $\mu$ $\pm$ $\sigma$ (CS)   | $\mu$ $\pm$ $\sigma$ (CS)   | $\mu$ $\pm$ $\sigma$ (CS)  | $\mu$ $\pm$ $\sigma$ (CS)  |
+K=10 | 4.3 $\pm$ 0.54 (80) | 6.3 $\pm$ 1.3 (906) | 10.4 $\pm$ 4.0 (486) | 10.1 $\pm$ 3.0 (486) | 6.2 $\pm$ 1.4 (131) | 8.3 $\pm$ 4.0 (65) |
+K=15 | 4.3 $\pm$ 0.60 (42) | 6.3 $\pm$ 1.4 (585) | 10.1 $\pm$ 3.6 (438) | 10.2 $\pm$ 2.7 (438) | 5.8 $\pm$ 1.6 (102) | 8.1 $\pm$ 4.0 (58) |
+K=20 | 4.0 $\pm$ 0.64 (18) | 6.6 $\pm$ 1.8 (376) | 10.9 $\pm$ 3.8 (354) | 10.7 $\pm$ 2.8 (354) | 6.0 $\pm$ 1.6 (98)  | 7.7 $\pm$ 4.1 (22) |
+K=30 | 4.0 $\pm$ 0.64 (18) | 6.8 $\pm$ 1.6 (335) | 9.0 $\pm$ 4.9  (306) | 11.2 $\pm$ 3.3 (306) | 5.7 $\pm$ 1.6 (74)  | 8.1 $\pm$ 4.2 (19) |
+K=5449 | 3.5 $\pm$ 0.33 (1)| 6.2 $\pm$ 1.8 (1)   | 12.1 $\pm$ 8.0  (1)  | 10.6 $\pm$ 3.5 (1)   | 5.5 $\pm$ 1.7 (1)   | 5.9 $\pm$ 3.0 (1)  |
 
 <figcaption>Table 3. Forecasting results when we increase the number of clusters. The extreme case (K=N) with one model per substation is reproduced from Table 2 in the last column for easier comparison. CS: Cluster size.</figcaption><br/>
 
