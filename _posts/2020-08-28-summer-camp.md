@@ -185,7 +185,7 @@ There are several interesting results within Table 2:
 Now comes the interesting bit: the number of clusters K varies (30,20,15,10) and the forecast is done using the model trained using all the members of each clusters together. For the case of clarity, we only report the results with one model, CatBoost regressor. 
 
 {:class="newtable"}
-||  House1||  House2|| Cabin1|| Cabin2|| Industry1|| Industry2||
+||  |House1|  |House2| |Cabin1| |Cabin2| |Industry1| |Industry2|
 |----------------------------|--------------------------|--------------------------|---------------------------|----------------------------|--------------------------|--------------------------|--------------------------|--------------------------|---------------------------|----------------------------|--------------------------|--------------------------|
 |                            | CS | Mean $\pm$ Std  | CS | Mean $\pm$ Std  |  CS| Mean $\pm$ Std  | CS | Mean $\pm$ Std   | CS | Mean $\pm$ Std  | Cluster size | Mean $\pm$ Std  |
 K=10 | 80 | 4.28 $\pm$ 0.54 | 906 | 6.32 $\pm$ 1.26 | 486 | 10.36 $\pm$ 3.98 | 486 | 10.13 $\pm$ 3.02 | 131 | 6.16 $\pm$ 1.44 | 65 | 8.28 $\pm$ 3.99 |
