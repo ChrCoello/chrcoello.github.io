@@ -169,13 +169,13 @@ In *Figure 7*, we can visually assess the performance of the four models when pr
 {:class="newtable"}
 || House 1| House 2|Cabin 1|Cabin 2| Industry 1| Industry 2|
 |----------------------------|--------------------------|--------------------------|---------------------------|----------------------------|--------------------------|--------------------------|
-|                            | Mean $\pm$ Std  | Mean $\pm$ Std  |  Mean $\pm$ Std   | Mean $\pm$ Std   | Mean $\pm$ Std  | Mean $\pm$ Std  |
-| Random Forest              | 3.49 $\pm$ 0.42 | 5.29 $\pm$ 1.42 |	11.48 $\pm$ 6.8  | 10.1 $\pm$ 4.68  | 5.16 $\pm$ 1.6  |	6.37 $\pm$ 3.37 |
-| Gradient Boosting regressor| 3.58 $\pm$ 0.48 | 6.21 $\pm$ 1.6  |	12.18 $\pm$ 7.92 | 11.17 $\pm$ 3.55 | 5.91 $\pm$ 1.88 |	6.17 $\pm$ 2.77 |
-| CatBoost Regressor         | 3.49 $\pm$ 0.33 | 6.22 $\pm$ 1.75 |	12.1 $\pm$ 7.95  | 10.59 $\pm$ 3.47 | 5.53 $\pm$ 1.65 |	5.94 $\pm$ 2.98 | 
-| Facebook Prophet           | 4.62 $\pm$ 0.9  | 15.42 $\pm$ 5.04|	10.85 $\pm$ 5.0  | 13.22 $\pm$ 6.21 | 7.37 $\pm$ 2.32 |	8.55 $\pm$ 2.69 | 
+|                            | $\mu$ $\pm$ $\sigma$  | $\mu$ $\pm$ $\sigma$ |  $\mu$ $\pm$ $\sigma$   | $\mu$ $\pm$ $\sigma$   | $\mu$ $\pm$ $\sigma$ | $\mu$ $\pm$ $\sigma$  |
+| Random Forest              | 3.5 $\pm$ 0.42 | 5.3 $\pm$ 1.4 |	11.5 $\pm$ 6.8  | 10.1 $\pm$ 4.7 | 5.2 $\pm$ 1.6 |	6.4 $\pm$ 3.4 |
+| Gradient Boosting regressor| 3.6 $\pm$ 0.48 | 6.2 $\pm$ 1.6 |	12.2 $\pm$ 7.9  | 11.2 $\pm$ 3.6 | 5.9 $\pm$ 1.9 |	6.2 $\pm$ 2.8 |
+| CatBoost Regressor         | 3.5 $\pm$ 0.33 | 6.2 $\pm$ 1.7 |	12.1 $\pm$ 8.0  | 10.6 $\pm$ 3.5 | 5.5 $\pm$ 1.7 |	5.9 $\pm$ 3.0 | 
+| Facebook Prophet           | 4.6 $\pm$ 0.90 | 15.4 $\pm$ 5.0|	10.9 $\pm$ 5.0  | 13.2 $\pm$ 6.2 | 7.4 $\pm$ 2.3 |	8.6 $\pm$ 2.7 | 
 
-<figcaption>Table 2. Forecasting results obtained with four different models. The mean (and std) reported in the table are the mean (and std) over the 15 forecasts horizons. Each forecast horizon predicts 67 hours in the future.</figcaption><br/>
+<figcaption>Table 2. Forecasting results obtained with four different models. The mean and standard deviation reported in the table are the mean and standard deviation calculated over the 15 forecasts horizons. Each forecast horizon predicts 67 hours in the future.</figcaption><br/>
 
 There are several interesting results within Table 2:  
  1. The metrics obtained for all three tree-based models are roughly similar, whereas Prophet is worse in 5 out of 6 cases. Without entering into details of Prophet, we generally didn't see the potential of using this model for short-term load forecasting. 
