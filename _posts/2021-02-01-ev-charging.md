@@ -26,8 +26,9 @@ In order to compare levels between groups, each hourly consumption was summarize
 <br/>
 
 When all the members of the group are tranformed, one can represent the mean maximum, mean minimum and mean average and the respective   confidence interval of each mean, represented here using the [standard error of the mean](https://en.wikipedia.org/wiki/Standard_error){:target="_blank"}.
-<img src="/images/2021-02-01-ev-charging/all_no_ev_owner_max_min_avg_per_day.png" width="400" class="center" alt="no EV group">
-<img src="/images/2021-02-01-ev-charging/all_ev_owner_max_min_avg_per_day.png" width="400" class="center" alt="EV group">
+
+[![no EV group](/images/2021-02-01-ev-charging/all_no_ev_owner_max_min_avg_per_day.png)](/images/2021-02-01-ev-charging/all_no_ev_owner_max_min_avg_per_day.png){:target="_blank"}
+[![EV group](/images/2021-02-01-ev-charging/all_ev_owner_max_min_avg_per_day.png)](/images/2021-02-01-ev-charging/all_ev_owner_max_min_avg_per_day.png){:target="_blank"}
 <figcaption>Figure 3. Mean average, mean minimum and mean maximum consumption per day (kWh/h) of the no-EV (top) and EV (bottom) group.</figcaption>
 <br/>
 
@@ -64,7 +65,7 @@ In Figure 4. we can see the weekly patterns for the EV and no-EV group. The bott
 [![weekly averages](/images/2021-02-01-ev-charging/weekly_averages.png)](/images/2021-02-01-ev-charging/weekly_averages.png){:target="_blank"}
 [![weekly averages centered](/images/2021-02-01-ev-charging/weekly_averages_normalised.png)](/images/2021-02-01-ev-charging/weekly_averages_normalised.png){:target="_blank"}
 <figcaption>Figure 4. The weekly patterns (top) and normalised weekly patterns (bottom) for both groups.</figcaption>
-
+<br/>
 There is a lot of information to unpack here. We see again, as in the previous chapter, that the average connsumption is higher for the EV than no-EV group. From the normlaised figure, we can dissect more precisely the weekly pattern: 
  * the morning peak is not more importnatn in the EV group (respcitvely to their mean) that the no-EV group
  * the afternoon peak is much larger in the EV group than the no-EV group. The amplitude of the difference is not relevant (as we have taken the mean of the mean of the mean!). More interestingly this afternoon peak starts to be larger around 18:00 every day and "finishes" around 03:00 the day after
@@ -82,7 +83,7 @@ In addition to this, we have generated the same curves per type of household.
 [![Rekkehus](/images/2021-02-01-ev-charging/weekly_averages_Rekkehus.png)](/images/2021-02-01-ev-charging/weekly_averages_Rekkehus.png){:target="_blank"}
 #### Apartment (*leilighet*)
 [![Leilighet](/images/2021-02-01-ev-charging/weekly_averages_Leilighet.png)](/images/2021-02-01-ev-charging/weekly_averages_Leilighet.png){:target="_blank"}
-
+<br/>
 By looking at the weekly patterns per type of housing, we remove one of the possible factor explaining the variations observed on the whole group. Clearly we see that apartments are very similar, independently of owning an EV or not, because the EV is often connected to another smart meter than  the one measuring the apartment consumption. 
 One suprising finding is that even once the type of housing similar, we still see a puzzling difference between morning and afternoon peak in both groups. Let's look at the normalized detached house curve: in this graph, we observe a rather puzzling lower consumption from the EV group in the morning peak compared to the noEV group. And this apllies for all days of the week. There is no direct explanation of this observation.
 
@@ -95,6 +96,7 @@ For the ones interested, we investigated if there is need to correct the hourly 
 Our initial hypothesis was that the weekly pattern would be "more right" if using season-corrected data as source.
 [![Fit model](/images/2021-02-01-ev-charging/fit_model_XX29.png)](/images/2021-02-01-ev-charging/fit_model_XX29.png){:target="_blank"}
 <figcaption>Figure 5. Fitting a seasonal model. Top: data and model fit. Bottom left: residuals. Bottom right: histogram of residuals.</figcaption>
+<br/>
 To test this hypothesis, we applied both cos+sin model and a [season-trend decomposition](https://www.statsmodels.org/devel/generated/statsmodels.tsa.seasonal.STL.html) using LOESS. 
 We saw very little to no change in the weekly pattern when compared to the weekly pattern with raw consumption data. 
 
