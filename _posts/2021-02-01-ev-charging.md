@@ -51,16 +51,21 @@ The HOBWA curves are generated as follows. For each end user:
 At the end, you have a reduced the dimensionality from 8794 points to 168 points. 
 
 Then, for each group (EV and no-EV group), the group mean is calculated:
-\\[ HOBWA_{EV} = \frac{1}{N_{EV}}\sum_{i=1}^{N_{EV}}{HOBWA_i} \\] 
+\\[ HOBWA_{EV} = \frac{1}{N_{EV}}\sum_{i=1}^{N_{EV}}{HOBWA_i} \\]
+\\[ HOBWA_{no-EV} = \frac{1}{N_{no-EV}}\sum_{i=1}^{N_{no-EV}}{HOBWA_i} \\]  
+
+Finally to see the variations of the weekly pattern independtly of the level of the curves, we also look at normalised HOBWA curves:
+\\[ HOBWA_{EV,norm} = \frac{HOBWA_{EV}-\mu_{HOBWA_{EV}}}{\sigma{HOBWA_{EV}} \\]
+
 
 
 ### EV vs. no-EV
-In Figure 4. we can see the weekly patterns for the EV and no-EV group. The bottom figure shows the centered curves (substraced the mean of each curve) for easier visualisation of the differences between the curves that ar enot difference in level.
+In Figure 4. we can see the weekly patterns for the EV and no-EV group. The bottom figure shows the normalised curves for easier visualisation of the differences between the curves that ar enot difference in level.
 [![weekly averages](/images/2021-02-01-ev-charging/weekly_averages.png)](/images/2021-02-01-ev-charging/weekly_averages.png){:target="_blank"}
-[![weekly averages centered](/images/2021-02-01-ev-charging/weekly_averages_centered.png)](/images/2021-02-01-ev-charging/weekly_averages_centered.png){:target="_blank"}
-<figcaption>Figure 4. The weekly patterns not centered (top) and centered (bottom) for both groups.</figcaption>
+[![weekly averages centered](/images/2021-02-01-ev-charging/weekly_averages_normalised.png)](/images/2021-02-01-ev-charging/weekly_averages_normalised.png){:target="_blank"}
+<figcaption>Figure 4. The weekly patterns (top) and normalised weekly patterns (bottom) for both groups.</figcaption>
 
-There is a lot of information to unpack here. We see again, as in the previous chapter, that the average connsumption is higher for the EV than no-EV group. From the centered figure, we can dissect more precisely the weekly pattern: 
+There is a lot of information to unpack here. We see again, as in the previous chapter, that the average connsumption is higher for the EV than no-EV group. From the normlaised figure, we can dissect more precisely the weekly pattern: 
  * the morning peak is not more importnatn in the EV group (respcitvely to their mean) that the no-EV group
  * the afternoon peak is much larger in the EV group than the no-EV group. The amplitude of the difference is not relevant (as we have taken the mean of the mean of the mean!). More interestingly this afternoon peak starts to be larger around 18:00 every day and "finishes" around 03:00 the day after
  * the level of the afternoon peak is constant from Monday to Thursday. For the EV group, the afternoon peak is lower on the Friday and Saturday. For the no-EV group, the afternoon peak is higher on Friday and Saturday. A possible explanation (not able to check in this analysis) is that EV owners also own a cabin and travel there on Friday, reducing the consumption in their primary house
