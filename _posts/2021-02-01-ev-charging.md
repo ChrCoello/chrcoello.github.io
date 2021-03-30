@@ -60,6 +60,13 @@ In Figure 4. we can see the weekly patterns for the EV and no-EV group. The bott
 [![weekly averages centered](/images/2021-02-01-ev-charging/weekly_averages_centered.png)](/images/2021-02-01-ev-charging/weekly_averages_centered.png){:target="_blank"}
 <figcaption>Figure 4. The weekly patterns not centered (top) and centered (bottom) for both groups.</figcaption>
 
+There is a lot of information to unpack here. We see again, as in the previous chapter, that the average connsumption is higher for the EV than no-EV group. From the centered figure, we can dissect more precisely the weekly pattern: 
+ * the morning peak is not more importnatn in the EV group (respcitvely to their mean) that the no-EV group
+ * the afternoon peak is much larger in the EV group than the no-EV group. The amplitude of the difference is not relevant (as we have taken the mean of the mean of the mean!). More interestingly this afternoon peak starts to be larger around 18:00 every day and "finishes" around 03:00 the day after
+ * the level of the afternoon peak is constant from Monday to Thursday. For the EV group, the afternoon peak is lower on the Friday and Saturday. For the no-EV group, the afternoon peak is higher on Friday and Saturday. A possible explanation (not able to check in this analysis) is that EV owners also own a cabin and travel there on Friday, reducing the consumption in their primary house
+ * the afternoon peak is maximum around 21:00 / 22:00 for the EV group and around 18:00 / 19:00 for no-EV group. This can be interpreted as a possible first sign of smart charging patterns of a subset of the EV owners.
+ * the consumption between 03:00 and the morning and the consumption the morning peak and the afternoon peak is more flat for the no-EV group than the EV groupm which we believe to be dependant of the type of household.  
+
 In addition to this, we have generated the same curves per type of household:
 #### Detached house (*enebolig*)
 [![Enebolig](/images/2021-02-01-ev-charging/weekly_averages_Enebolig.png)](/images/2021-02-01-ev-charging/weekly_averages_Enebolig.png){:target="_blank"}
@@ -69,6 +76,9 @@ In addition to this, we have generated the same curves per type of household:
 [![Rekkehus](/images/2021-02-01-ev-charging/weekly_averages_Rekkehus.png)](/images/2021-02-01-ev-charging/weekly_averages_Rekkehus.png){:target="_blank"}
 #### Apartment (*leilighet*)
 [![Leilighet](/images/2021-02-01-ev-charging/weekly_averages_Leilighet.png)](/images/2021-02-01-ev-charging/weekly_averages_Leilighet.png){:target="_blank"}
+
+
+
 
 ## Appendix 
 Correcting for yearly variation -- why it is not useful in this case
