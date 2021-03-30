@@ -56,7 +56,7 @@ Then, for each group (EV and no-EV group), the group mean is calculated:
 
 ### EV vs. no-EV
 
-![weekly averages](/images/2021-02-01-ev-charging/weekly_averages.png){:width="800px"}
+![weekly averages](/images/2021-02-01-ev-charging/weekly_averages.png){:class="img-responsive"}
 <figcaption>Figure 4. The weekly patterns not centered (top) and centered (bottom) for both groups.</figcaption>
 
 Per household type
