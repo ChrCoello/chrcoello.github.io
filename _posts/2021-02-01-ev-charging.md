@@ -25,7 +25,7 @@ In order to compare levels between groups, each hourly consumption was summarize
 <figcaption>Figure 2. Average, minimum and maximum consumption per day (kWh/h) of a randomly selected member of the no-EV (top) and EV (bottom) group.</figcaption>
 <br/>
 
-When all the members of the group are tranformed, one can represent the mean maximum, mean minimum and mean average and the respective   confidence interval of each mean, represented here using the [standard error of the mean](https://en.wikipedia.org/wiki/Standard_error).
+When all the members of the group are tranformed, one can represent the mean maximum, mean minimum and mean average and the respective   confidence interval of each mean, represented here using the [standard error of the mean](https://en.wikipedia.org/wiki/Standard_error){:target="_blank"}.
 <img src="/images/2021-02-01-ev-charging/all_no_ev_owner_max_min_avg_per_day.png" width="400" class="center" alt="no EV group">
 <img src="/images/2021-02-01-ev-charging/all_ev_owner_max_min_avg_per_day.png" width="400" class="center" alt="EV group">
 <figcaption>Figure 3. Mean average, mean minimum and mean maximum consumption per day (kWh/h) of the no-EV (top) and EV (bottom) group.</figcaption>
@@ -56,7 +56,8 @@ Then, for each group (EV and no-EV group), the group mean is calculated:
 
 ### EV vs. no-EV
 
-[![weekly averages](/images/2021-02-01-ev-charging/weekly_averages.png)](/images/2021-02-01-ev-charging/weekly_averages.png)
+[![weekly averages](/images/2021-02-01-ev-charging/weekly_averages.png)](/images/2021-02-01-ev-charging/weekly_averages.png){:target="_blank"}
+[![weekly averages centered](/images/2021-02-01-ev-charging/weekly_averages_centered.png)](/images/2021-02-01-ev-charging/weekly_averages_centered.png){:target="_blank"}
 <figcaption>Figure 4. The weekly patterns not centered (top) and centered (bottom) for both groups.</figcaption>
 
 Per household type
