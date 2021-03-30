@@ -18,7 +18,16 @@ The raw data for a randomly picked end user from the no-EV group (top) and a ran
 <br/>
 The usual yearly variation observed in Norwegian households is seen in both examples. Hour-to-hour variability due to daily changes in electricity consumption is also observed. In the next paragraph, we will first try to look at the level of electricty consumption between the groups.
 
-Daily : min, average and max
+### Extracting min, average and max per day
+In order to compare levels between groups, each hourly consumption was transformed into a daily consumption. Each time series was transformed from 8794 points to 366 points. The transformation used was average per day (daily_avg), min per day (min_day) and max per day (max_day). Three series per group member was obtained as observed in Figure 2.
+<img src="/images/2021-02-01-ev-charging/example_no_ev_owner_00_max_min_avg_per_day.png" width="800" class="center" alt="no EV group">
+<img src="/images/2021-02-01-ev-charging/example_ev_owner_00_max_min_avg_per_day.png" width="800" class="center" alt="EV group">
+<figcaption>Figure 2. Average, minimum and maximum consumption per day (*kWh/h*) of a randomly selected member of the no-EV (top) and EV (bottom) group.</figcaption>
+<br/>
+
+When all the members of the group are tranformed, one can represent the mean maximum, mean minimum and mean average and the respective 5th and 95th quantile for each distribution.
+
+
 Per household type
 
 ## Weekly patterns analysis
