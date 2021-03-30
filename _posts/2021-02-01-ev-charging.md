@@ -51,7 +51,7 @@ The HOBWA curves are generated as follows. For each end user:
 At the end, you have a reduced the dimensionality from 8794 points to 168 points. 
 
 Then, for each group (EV and no-EV group), the group mean is calculated:
-\\[ HOBWA_{EV} = \frac{1}{N_{EV}}\sum_{i=1}^{N_{EV}}{HOBWA_i} \\] 
+\\[ {HOBWA}_{EV} = \frac{1}{N_{EV}}\sum_{i=1}^{N_{EV}}{HOBWA_i} \\] 
 
 
 ### EV vs. no-EV
