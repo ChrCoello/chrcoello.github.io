@@ -52,10 +52,10 @@ At the end, you have a reduced the dimensionality from 8794 points to 168 points
 
 Then, for each group (EV and no-EV group), the group mean is calculated:
 \\[ HOBWA_{EV} = \frac{1}{N_{EV}}\sum_{i=1}^{N_{EV}}{HOBWA_i} \\]
-\\[ HOBWA_{no-EV} = \frac{1}{N_{no-EV}}\sum_{i=1}^{N_{no-EV}}{HOBWA_i} \\]  
+\\[ HOBWA_{noEV} = \frac{1}{N_{noEV}}\sum_{i=1}^{N_{noEV}}{HOBWA_i} \\]  
 
 Finally to see the variations of the weekly pattern independtly of the level of the curves, we also look at normalised HOBWA curves:
-\\[ HOBWA_{EV,norm} = \frac{HOBWA_{EV}-\mu_{HOBWA_{EV}}}{\sigma{HOBWA_{EV}} \\]
+\\[ HOBWA_{EV,norm} = \frac{HOBWA_{EV}-\mu_{HOBWA_{EV}}}{\sigma_{HOBWA_{EV}} \\]
 
 
 
@@ -72,9 +72,10 @@ There is a lot of information to unpack here. We see again, as in the previous c
  * the afternoon peak is maximum around 21:00 / 22:00 for the EV group and around 18:00 / 19:00 for no-EV group. This can be interpreted as a possible first sign of smart charging patterns of a subset of the EV owners.
  * the consumption between 03:00 and the morning and the consumption the morning peak and the afternoon peak is more flat for the no-EV group than the EV groupm which we believe to be dependant of the type of household.  
 
-In addition to this, we have generated the same curves per type of household:
+In addition to this, we have generated the same curves per type of household.
 #### Detached house (*enebolig*)
 [![Enebolig](/images/2021-02-01-ev-charging/weekly_averages_Enebolig.png)](/images/2021-02-01-ev-charging/weekly_averages_Enebolig.png){:target="_blank"}
+[![Enebolig](/images/2021-02-01-ev-charging/weekly_averages_Enebolig_normalised.png)](/images/2021-02-01-ev-charging/weekly_averages_Enebolig_normalised.png){:target="_blank"}
 #### Semi-detached house (*tomannsbolig*)
 [![Tomannsbolig](/images/2021-02-01-ev-charging/weekly_averages_Tomannsbolig.png)](/images/2021-02-01-ev-charging/weekly_averages_Tomannsbolig.png){:target="_blank"}
 #### Townhouse (*rekkehus*) 
@@ -82,7 +83,7 @@ In addition to this, we have generated the same curves per type of household:
 #### Apartment (*leilighet*)
 [![Leilighet](/images/2021-02-01-ev-charging/weekly_averages_Leilighet.png)](/images/2021-02-01-ev-charging/weekly_averages_Leilighet.png){:target="_blank"}
 
-
+We can see that the 
 
 
 ## Appendix 
