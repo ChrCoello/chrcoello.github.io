@@ -6,7 +6,7 @@ As part of [Elvia](https://www.elvia.no/){:target="_blank"}'s large [pilot study
 The dataset gathered for this analysis is as follows: 
  - the hourly consumption (active energy, *kWh/h*) for 2020 of **181** end users that own and charge their EV at home (EV group)
  - the hourly consumption for 2020 of **978** end users that don't own an EV (no-EV group)
- - the type of household these end users live in, with four categories possible: detached house (*enebolig*), apartment (*leilighet*), townhouse (*rekkehus*) and tomannsbolig (*semi-detached house*) 
+ - the type of household these end users live in, with four categories possible: detached house (*enebolig*), semi-detached house (*tomannsbolig*), townhouse (*rekkehus*) and apartment (*leilighet*).  
 
 We filtered the hourly consumption by keeping only households where we had 99% of all hourly points available for 2020 (8696 out of 8784 data points).
 
@@ -55,13 +55,20 @@ Then, for each group (EV and no-EV group), the group mean is calculated:
 
 
 ### EV vs. no-EV
-
+In Figure 4. we can see the weekly patterns for the EV and no-EV group. The bottom figure shows the centered curves (substraced the mean of each curve) for easier visualisation of the differences between the curves that ar enot difference in level.
 [![weekly averages](/images/2021-02-01-ev-charging/weekly_averages.png)](/images/2021-02-01-ev-charging/weekly_averages.png){:target="_blank"}
 [![weekly averages centered](/images/2021-02-01-ev-charging/weekly_averages_centered.png)](/images/2021-02-01-ev-charging/weekly_averages_centered.png){:target="_blank"}
 <figcaption>Figure 4. The weekly patterns not centered (top) and centered (bottom) for both groups.</figcaption>
 
-Per household type
-
+In addition to this, we have generated the same curves per type of household:
+#### Detached house (*enebolig*)
+[![Enebolig](/images/2021-02-01-ev-charging/weekly_averages_Enebolig.png)](/images/2021-02-01-ev-charging/weekly_averages_Enebolig.png){:target="_blank"}
+#### Semi-detached house (*tomannsbolig*)
+[![Tomannsbolig](/images/2021-02-01-ev-charging/weekly_averages_Tomannsbolig.png)](/images/2021-02-01-ev-charging/weekly_averages_Tomannsbolig.png){:target="_blank"}
+#### Townhouse (*rekkehus*) 
+[![Rekkehus](/images/2021-02-01-ev-charging/weekly_averages_Rekkehus.png)](/images/2021-02-01-ev-charging/weekly_averages_Rekkehus.png){:target="_blank"}
+#### Apartment (*leilighet*)
+[![Leilighet](/images/2021-02-01-ev-charging/weekly_averages_Leilighet.png)](/images/2021-02-01-ev-charging/weekly_averages_Leilighet.png){:target="_blank"}
 
 ## Appendix 
 Correcting for yearly variation -- why it is not useful in this case
