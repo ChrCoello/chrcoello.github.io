@@ -1,4 +1,4 @@
-# Charing electric vehicles from home -- An analysis of charging patterns in Norway in 2020
+# Electric vehicles and power consumption at home -- an analysis of charging patterns in Norway in 2020
 
 As part of [Elvia](https://www.elvia.no/){:target="_blank"}'s large [pilot study on power tariff](https://www.elvia.no/effekttariff){:target="_blank"}, a survey was conducted to understand the pilot end user relationship with using and saving energy. Two questions of this survey targeted electric vehicles (EV), as we asked the end users if they owned an EV vehicle in 2020 and if they did, if their household was the main charging point for their car. This sparked interest in our pilot team to conduct a side analysis looking at the real consumption patterns of EV and non EV owners.
 
