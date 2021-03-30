@@ -1,6 +1,6 @@
 # Charing electric vehicles from home -- An analysis of charging patterns in Norway in 2020
 
-As part of [Elvia](https://www.elvia.no/)'s large [pilot study on power tariff](https://www.elvia.no/effekttariff){:target="_blank"}, a survey was conducted to understand the pilot end user relationship with using and saving energy. Two questions of this survey targeted electric vehicles (EV), as we asked the end users if they owned an EV vehicle in 2020 and if they did, if their household was the main charging point for their car. This sparked interest in our pilot team to conduct a side analysis looking at the real consumption patterns of EV and non EV owners.
+As part of [Elvia](https://www.elvia.no/){:target="_blank"}'s large [pilot study on power tariff](https://www.elvia.no/effekttariff){:target="_blank"}, a survey was conducted to understand the pilot end user relationship with using and saving energy. Two questions of this survey targeted electric vehicles (EV), as we asked the end users if they owned an EV vehicle in 2020 and if they did, if their household was the main charging point for their car. This sparked interest in our pilot team to conduct a side analysis looking at the real consumption patterns of EV and non EV owners.
 
 ## Dataset
 The dataset gathered for this analysis is as follows: 
@@ -51,12 +51,12 @@ The HOBWA curves are generated as follows. For each end user:
 At the end, you have a reduced the dimensionality from 8794 points to 168 points. 
 
 Then, for each group (EV and no-EV group), the group mean is calculated:
-\\[ {HOBWA}_{EV} = \frac{1}{N_{EV}}\sum_{i=1}^{N_{EV}}{HOBWA_i} \\] 
+\\[ HOBWA_{EV} = \frac{1}{N_{EV}}\sum_{i=1}^{N_{EV}}{HOBWA_i} \\] 
 
 
 ### EV vs. no-EV
-<img src="/images/2021-02-01-ev-charging/weekly_averages.png" width="800" class="center" alt="not centered">
-<img src="/images/2021-02-01-ev-charging/weekly_averages_centered.png" width="800" class="center" alt="centered">
+
+![weekly averages](/images/2021-02-01-ev-charging/weekly_averages.png){:width="800px"}
 <figcaption>Figure 4. The weekly patterns not centered (top) and centered (bottom) for both groups.</figcaption>
 
 Per household type
