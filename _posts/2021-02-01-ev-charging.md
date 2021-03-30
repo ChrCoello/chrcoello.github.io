@@ -14,19 +14,24 @@ We filtered the hourly consumption by keeping only households where we had 99% o
 The raw data for a randomly picked end user from the no-EV group (top) and a randomly picked end user from the EV group (bottom) can be observed in Figure 1.
 <img src="/images/2021-02-01-ev-charging/example_no_ev_owner_00.png" width="800" class="center" alt="no EV group">
 <img src="/images/2021-02-01-ev-charging/example_ev_owner_00.png" width="800" class="center" alt="EV group">
-<figcaption>Figure 1. Hourly consumption (*kWh/h*) of a randomly selected member of the no-EV (top) and EV (bottom) group.</figcaption>
+<figcaption>Figure 1. Hourly consumption (kWh/h) of a randomly selected member of the no-EV (top) and EV (bottom) group.</figcaption>
 <br/>
-The usual yearly variation observed in Norwegian households is seen in both examples. Hour-to-hour variability due to daily changes in electricity consumption is also observed. In the next paragraph, we will first try to look at the level of electricty consumption between the groups.
+The usual yearly variation observed in Norwegian households is seen in both examples. Hour-to-hour variability due to daily changes in electricity consumption is also observed. In the next paragraph, we look at the level of electricty consumption between the groups the two groups.
 
 ### Extracting min, average and max per day
-In order to compare levels between groups, each hourly consumption was transformed into a daily consumption. Each time series was transformed from 8794 points to 366 points. The transformation used was average per day (daily_avg), min per day (min_day) and max per day (max_day). Three series per group member was obtained as observed in Figure 2.
+In order to compare levels between groups, each hourly consumption was summarized into a daily consumption, leading to reduction of teh time series length from 8794 points to 366 points. Three series per end user were obtained (Figure 2) as the average per day (daily_avg), min per day (min_day) and max per day (max_day) were used to summarize the daily consumption.
 <img src="/images/2021-02-01-ev-charging/example_no_ev_owner_00_max_min_avg_per_day.png" width="800" class="center" alt="no EV group">
 <img src="/images/2021-02-01-ev-charging/example_ev_owner_00_max_min_avg_per_day.png" width="800" class="center" alt="EV group">
-<figcaption>Figure 2. Average, minimum and maximum consumption per day (*kWh/h*) of a randomly selected member of the no-EV (top) and EV (bottom) group.</figcaption>
+<figcaption>Figure 2. Average, minimum and maximum consumption per day (kWh/h) of a randomly selected member of the no-EV (top) and EV (bottom) group.</figcaption>
 <br/>
 
-When all the members of the group are tranformed, one can represent the mean maximum, mean minimum and mean average and the respective 5th and 95th quantile for each distribution.
+When all the members of the group are tranformed, one can represent the mean maximum, mean minimum and mean average and the respective   confidence interval of each mean, represented here using the [standard error of the mean] (https://en.wikipedia.org/wiki/Standard_error).
+<img src="/images/2021-02-01-ev-charging/all_no_ev_owner_max_min_avg_per_day.png" width="800" class="center" alt="no EV group">
+<img src="/images/2021-02-01-ev-charging/all_ev_owner_max_min_avg_per_day.png" width="800" class="center" alt="EV group">
+<figcaption>Figure 3. Mean average, mean minimum and mean maximum consumption per day (kWh/h) of the no-EV (top) and EV (bottom) group.</figcaption>
+<br/>
 
+We clearly see that the level
 
 Per household type
 
