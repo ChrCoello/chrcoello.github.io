@@ -26,17 +26,35 @@ In order to compare levels between groups, each hourly consumption was summarize
 <br/>
 
 When all the members of the group are tranformed, one can represent the mean maximum, mean minimum and mean average and the respective   confidence interval of each mean, represented here using the [standard error of the mean] (https://en.wikipedia.org/wiki/Standard_error).
-<img src="/images/2021-02-01-ev-charging/all_no_ev_owner_max_min_avg_per_day.png" width="800" class="center" alt="no EV group">
-<img src="/images/2021-02-01-ev-charging/all_ev_owner_max_min_avg_per_day.png" width="800" class="center" alt="EV group">
+<img src="/images/2021-02-01-ev-charging/all_no_ev_owner_max_min_avg_per_day.png" width="400" class="center" alt="no EV group">
+<img src="/images/2021-02-01-ev-charging/all_ev_owner_max_min_avg_per_day.png" width="400" class="center" alt="EV group">
 <figcaption>Figure 3. Mean average, mean minimum and mean maximum consumption per day (kWh/h) of the no-EV (top) and EV (bottom) group.</figcaption>
 <br/>
 
-We clearly see that the level
+We clearly see that both the mean daily average and even more the mean daily maximum are higher in the EV group. We believe that two main factors explain these differences : 
+ - larger households in the sample of the EV owners 
+ - the charging of EV 
+In the next paragraph, we will show more in details which effect  these two factors have.
 
-Per household type
 
 ## Weekly patterns analysis
-Explain how we generate the hourly-based weekly XXX
+In this paragraph, we will look at the **ho**urly-**b**ased **w**eekly **a**verage (HOBWA) patterns. This representation of the data allows to an easy analysis of weekly patterns.
+
+### Generating HOBWA curves
+The HOBWA curves are generated as follows. For each end user: 
+ 1. Start the hourly consumption for the whole dataset
+ 2. For each timestamp, generate a variable containing the hour of the week. The Hourof the week is between 0 and 167.
+ ```python
+ df['hour_of_week'] = df['date'].dt.dayofweek * 24 + (df['date'].dt.hour)
+```
+ 3. For each hour of the week, measure the average consumption
+At the end, you have a reduced the dimensionality from 8794 points to 168 points. 
+
+Then, for each group (EV and no-EV group), the group mean is calculated :
+\[ a^2 = b^2 + c^2 \\] 
+
+
+
 EV vs non EV
 Per household type
 
