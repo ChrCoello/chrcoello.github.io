@@ -83,10 +83,18 @@ In addition to this, we have generated the same curves per type of household.
 #### Apartment (*leilighet*)
 [![Leilighet](/images/2021-02-01-ev-charging/weekly_averages_Leilighet.png)](/images/2021-02-01-ev-charging/weekly_averages_Leilighet.png){:target="_blank"}
 
-We can see that the 
+By looking at the weekly patterns per type of housing, we remove one of the possible factor explaining the variations observed on the whole group. Clearly we see that apartments are very similar, independently of owning an EV or not, because the EV is often connected to another smart meter than  the one measuring the apartment consumption. 
+One suprising finding is that even once the type of housing similar, we still see a puzzling difference between morning and afternoon peak in both groups. Let's look at the normalized detached house curve: in this graph, we observe a rather puzzling lower consumption from the EV group in the morning peak compared to the noEV group. And this apllies for all days of the week. There is no direct explanation of this observation.
 
+
+## Conclusion
+This analysis is a tiny part of the effort Elvia is working on in order to understand and learn how our end-users consume the power we deliver them. The very recent boom of electric vehicle in Norway has modified the constraints on our grid. Understanding better these new constraints is key in order to plan, operate and maintain the electric grid of today and tomorrow.
 
 ## Appendix 
-Correcting for yearly variation -- why it is not useful in this case
-For one person
-For all the EV owners
+For the ones interested, we investigated if there is need to correct the hourly consumption data for seasonal variation. In Norway, energy consumption is very correlated to exterior temperature and therefore seasonal.
+Our initial hypothesis was that the weekly pattern would be "more right" if using season-corrected data as source.
+[![Fit model](/images/2021-02-01-ev-charging/fit_model_XX29.png)](/images/2021-02-01-ev-charging/fit_model_XX29.png){:target="_blank"}
+<figcaption>Figure 5. Fitting a seasonal model. Top: data and model fit. Bottom left: residuals. Bottom right: histogram of residuals.</figcaption>
+To test this hypothesis, we applied both cos+sin model and a [season-trend decomposition](https://www.statsmodels.org/devel/generated/statsmodels.tsa.seasonal.STL.html) using LOESS. 
+We saw very little to no change in the weekly pattern when compared to the weekly pattern with raw consumption data. 
+
