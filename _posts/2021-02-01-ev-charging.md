@@ -50,12 +50,15 @@ The HOBWA curves are generated as follows. For each end user:
  3. For each hour of the week, measure the average consumption
 At the end, you have a reduced the dimensionality from 8794 points to 168 points. 
 
-Then, for each group (EV and no-EV group), the group mean is calculated :
-\[ a^2 = b^2 + c^2 \\] 
+Then, for each group (EV and no-EV group), the group mean is calculated:
+\\[ HOBWA_{EV} = \frac{1}{N_{EV}}\sum_{i=1}^{N_{EV}}{HOBWA_i} \\] 
 
 
+### EV vs. no-EV
+<img src="/images/2021-02-01-ev-charging/weekly_averages.png" width="800" class="center" alt="not centered">
+<img src="/images/2021-02-01-ev-charging/weekly_averages_centered.png" width="800" class="center" alt="centered">
+<figcaption>Figure 4. The weekly patterns not centered (top) and centered (bottom) for both groups.</figcaption>
 
-EV vs non EV
 Per household type
 
 
