@@ -63,30 +63,50 @@ Finally to see the variations of the weekly pattern independently of the level o
 \\[ HOBWA_{EV,cent} = HOBWA_{EV}-\mu_{HOBWA_{EV}} \\]
 
 
-
-### EV vs. no-EV
+### EV vs. no-EV : all the data
 In Figure 4. we can see the weekly patterns for the EV and no-EV group. The bottom figure shows the centred curves for easier visualization of the differences between the curves that are not difference in level.
-[![weekly averages](/images/2021-02-01-ev-charging/weekly_averages.png)](/images/2021-02-01-ev-charging/weekly_averages.png){:target="_blank"}
-[![weekly averages centered](/images/2021-02-01-ev-charging/weekly_averages_normalised.png)](/images/2021-02-01-ev-charging/weekly_averages_normalised.png){:target="_blank"}
+[![weekly averages](/images/2021-02-01-ev-charging/weekly_averages_2020.png)](/images/2021-02-01-ev-charging/weekly_averages_2020.png){:target="_blank"}
+[![weekly averages centred](/images/2021-02-01-ev-charging/weekly_averages_2020_centred.png)](/images/2021-02-01-ev-charging/weekly_averages_2020_centred.png){:target="_blank"}
 <figcaption>Figure 4. The weekly patterns (top) and centred weekly patterns (bottom) for both groups.</figcaption>
 <br/>
-There is a lot of information to unpack here. We see again, as in the previous chapter, that the average consumption is higher for the EV than no-EV group. From the normalized figure, we can dissect more precisely the weekly pattern: 
+There is a lot of information to unpack here. We see again, as in the previous chapter, that the average consumption is higher for the EV than no-EV group. From the figure showing the centred weekly patterns, we can extract the following observations: 
  * the morning peak is not more important in the EV group (respectively to their mean) that the no-EV group
  * the afternoon peak is much larger in the EV group than the no-EV group. The amplitude of the difference is not relevant (as we have taken the mean of the mean of the mean!). More interestingly this afternoon peak starts to be larger around 18:00 every day and "finishes" around 03:00 the day after
  * the level of the afternoon peak is constant from Monday to Thursday. For the EV group, the afternoon peak is lower on the Friday and Saturday. For the no-EV group, the afternoon peak is higher on Friday and Saturday. A possible explanation (not able to check in this analysis) is that EV owners also own a cabin and travel there on Friday, reducing the consumption in their primary house
  * the afternoon peak is maximum around 21:00 / 22:00 for the EV group and around 18:00 / 19:00 for no-EV group. This can be interpreted as a possible first sign of smart charging patterns of a subset of the EV owners.
  * the consumption between 03:00 and the morning and the consumption the morning peak and the afternoon peak is more flat for the no-EV group than the EV group which we believe to be dependant of the type of household.  
 
-In addition to this, we have generated the same curves per type of household.
+TODO
+
+### EV vs. no-EV : per quarter
+First we look at the influence of the season with regard to the weekly consumption pattern. For this we looked at the weekly pattern per quarter: Q1 contains the months of January February and March, Q2 contains the months of April May and June, etc...
+For making the blog post lighter, only the centred weekly patterns are reported under.
+#### Q1
+[![Q1](/images/2021-02-01-ev-charging/weekly_averages_centred_2020_Q1.png)](/images/2021-02-01-ev-charging/weekly_averages_centred_2020_Q1.png){:target="_blank"}
+#### Q2
+[![Q2](/images/2021-02-01-ev-charging/weekly_averages_centred_2020_Q2.png)](/images/2021-02-01-ev-charging/weekly_averages_centred_2020_Q2.png){:target="_blank"}
+#### Q3
+[![Q3](/images/2021-02-01-ev-charging/weekly_averages_centred_2020_Q3.png)](/images/2021-02-01-ev-charging/weekly_averages_centred_2020_Q3.png){:target="_blank"}
+#### Q4
+[![Q4](/images/2021-02-01-ev-charging/weekly_averages_centred_2020_Q4.png)](/images/2021-02-01-ev-charging/weekly_averages_centred_2020_Q4.png){:target="_blank"}
+<br/>
+
+TODO
+
+
+
+
+
+### EV vs. no-EV : per housing type
+Second, we look at the influence of the housing type with regard to the weekly consumption pattern.
 #### Detached house (*enebolig*)
-[![Enebolig](/images/2021-02-01-ev-charging/weekly_averages_Enebolig.png)](/images/2021-02-01-ev-charging/weekly_averages_Enebolig.png){:target="_blank"}
-[![Enebolig](/images/2021-02-01-ev-charging/weekly_averages_Enebolig_normalised.png)](/images/2021-02-01-ev-charging/weekly_averages_Enebolig_normalised.png){:target="_blank"}
+[![Enebolig](/images/2021-02-01-ev-charging/weekly_averages_Enebolig_2020_centered.png)](/images/2021-02-01-ev-charging/weekly_averages_Enebolig_2020_centered.png){:target="_blank"}
 #### Semi-detached house (*tomannsbolig*)
-[![Tomannsbolig](/images/2021-02-01-ev-charging/weekly_averages_Tomannsbolig.png)](/images/2021-02-01-ev-charging/weekly_averages_Tomannsbolig.png){:target="_blank"}
+[![Tomannsbolig](/images/2021-02-01-ev-charging/weekly_averages_Tomannsbolig_2020_centered.png)](/images/2021-02-01-ev-charging/weekly_averages_Tomannsbolig_2020_centered.png){:target="_blank"}
 #### Townhouse (*rekkehus*) 
-[![Rekkehus](/images/2021-02-01-ev-charging/weekly_averages_Rekkehus.png)](/images/2021-02-01-ev-charging/weekly_averages_Rekkehus.png){:target="_blank"}
+[![Rekkehus](/images/2021-02-01-ev-charging/weekly_averages_Rekkehus_2020_centered.png)](/images/2021-02-01-ev-charging/weekly_averages_Rekkehus_2020_centered.png){:target="_blank"}
 #### Apartment (*leilighet*)
-[![Leilighet](/images/2021-02-01-ev-charging/weekly_averages_Leilighet.png)](/images/2021-02-01-ev-charging/weekly_averages_Leilighet.png){:target="_blank"}
+[![Leilighet](/images/2021-02-01-ev-charging/weekly_averages_Leilighet_2020_centered.png)](/images/2021-02-01-ev-charging/weekly_averages_Leilighet_2020_centered.png){:target="_blank"}
 <br/>
 By looking at the weekly patterns per type of housing, we remove one of the possible factor explaining the variations observed on the whole group. Clearly we see that apartments are very similar, independently of owning an EV or not, because the EV is often connected to another smart meter than  the one measuring the apartment consumption. 
 One surprising finding is that even once the type of housing similar, we still see a puzzling difference between morning and afternoon peak in both groups. Let's look at the normalized detached house curve: in this graph, we observe a rather puzzling lower consumption from the EV group in the morning peak compared to the noEV group. And this applies for all days of the week. There is no direct explanation of this observation.
