@@ -4,12 +4,12 @@ As part of [Elvia](https://www.elvia.no/){:target="_blank"}'s large [pilot study
  - we asked the end users if they owned an EV vehicle in 2020
  - if they did, we asked if their household was the main charging point for their car. 
   
-This sparked interest in our pilot team to conduct a side analysis looking at the real consumption patterns of EV and non EV owners.
+This analysis is looking at the real consumption patterns of EV and non EV owners as a part of this pilot study.
 
 ## Dataset
 The dataset gathered for this analysis is as follows: 
- - the hourly consumption (active energy, *kWh/h*) for 2020 of **181** end users that own and charge their EV at home (EV group)
- - the hourly consumption for 2020 of **978** end users that do not own an EV (no-EV group)
+ - the hourly consumption (active energy, *kWh/h*) for 2020 of **181** end users that own and charge their EV at home (EV group), who answered yes to both questions above
+ - the hourly consumption for 2020 of **978** end users that do not own an EV (no-EV group), who answered no to both questions above
  - the type of household these end users live in, with four categories possible: detached house (*enebolig*), semi-detached house (*tomannsbolig*), townhouse (*rekkehus*) and apartment (*leilighet*).  
 
 We filtered the hourly consumption by keeping only households where we had 99% of all hourly points available for 2020 (8696 out of 8784 data points).
@@ -23,7 +23,7 @@ The raw data for a randomly picked end user from the no-EV group (top) and a ran
 The usual yearly variation observed in Norwegian households is seen in both examples. Hour-to-hour variability due to daily changes in electricity consumption is also observed. In the next paragraph, we look at the level of electricity consumption between the groups the two groups.
 
 ### Extracting min, average and max per day
-To compare levels between groups, each hourly consumption was summarized into a daily consumption, leading to reduction of teh time series length from 8794 points to 366 points. Three series per end user were obtained (Figure 2) as the average per day (daily_avg), min per day (min_day) and max per day (max_day) were used to summarize the daily consumption.
+To compare levels between groups, each hourly consumption was summarized into a daily consumption, leading to reduction of the time series length from 8794 points to 366 points. Three series per end user were obtained (Figure 2) as the average per day (daily_avg), min per day (min_day) and max per day (max_day) were used to summarize the daily consumption.
 <img src="/images/2021-02-01-ev-charging/example_no_ev_owner_00_max_min_avg_per_day.png" width="800" class="center" alt="no EV group">
 <img src="/images/2021-02-01-ev-charging/example_ev_owner_00_max_min_avg_per_day.png" width="800" class="center" alt="EV group">
 <figcaption>Figure 2. Average, minimum and maximum consumption per day (kWh/h) of a randomly selected member of the no-EV (top) and EV (bottom) group.</figcaption>
