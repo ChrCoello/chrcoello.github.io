@@ -59,16 +59,16 @@ Then, for each group (EV and no-EV group), the group mean is calculated:
 \\[ HOBWA_{EV} = \frac{1}{N_{EV}}\sum_{i=1}^{N_{EV}}{HOBWA_i} \\]
 \\[ HOBWA_{noEV} = \frac{1}{N_{noEV}}\sum_{i=1}^{N_{noEV}}{HOBWA_i} \\]  
 
-Finally to see the variations of the weekly pattern independently of the level of the curves, we also look at normalized HOBWA curves:
-\\[ HOBWA_{EV,norm} = \frac{HOBWA_{EV}-\mu_{HOBWA_{EV}}}{\sigma_{HOBWA_{EV}} \\]
+Finally to see the variations of the weekly pattern independently of the level of the curves, we also look at centred HOBWA curves:
+\\[ HOBWA_{EV,cent} = HOBWA_{EV}-\mu_{HOBWA_{EV}} \\]
 
 
 
 ### EV vs. no-EV
-In Figure 4. we can see the weekly patterns for the EV and no-EV group. The bottom figure shows the normalized curves for easier visualization of the differences between the curves that are not difference in level.
+In Figure 4. we can see the weekly patterns for the EV and no-EV group. The bottom figure shows the centred curves for easier visualization of the differences between the curves that are not difference in level.
 [![weekly averages](/images/2021-02-01-ev-charging/weekly_averages.png)](/images/2021-02-01-ev-charging/weekly_averages.png){:target="_blank"}
 [![weekly averages centered](/images/2021-02-01-ev-charging/weekly_averages_normalised.png)](/images/2021-02-01-ev-charging/weekly_averages_normalised.png){:target="_blank"}
-<figcaption>Figure 4. The weekly patterns (top) and normalised weekly patterns (bottom) for both groups.</figcaption>
+<figcaption>Figure 4. The weekly patterns (top) and centred weekly patterns (bottom) for both groups.</figcaption>
 <br/>
 There is a lot of information to unpack here. We see again, as in the previous chapter, that the average consumption is higher for the EV than no-EV group. From the normalized figure, we can dissect more precisely the weekly pattern: 
  * the morning peak is not more important in the EV group (respectively to their mean) that the no-EV group
