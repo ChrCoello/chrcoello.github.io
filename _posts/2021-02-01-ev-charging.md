@@ -6,6 +6,9 @@ As part of [Elvia](https://www.elvia.no/){:target="_blank"}'s large [pilot study
   
 This analysis is looking at the real consumption patterns of EV and non EV owners as a part of this pilot study.
 
+1. TOC
+{:toc}
+
 ## Dataset
 The dataset gathered for this analysis is as follows: 
  - the hourly consumption (active energy, *kWh/h*) for 2020 of **181** end users that own and charge their EV at home (EV group), who answered yes to both questions above
@@ -98,12 +101,12 @@ TODO
 
 
 ### EV vs. no-EV : per housing type
-Second, we look at the influence of the housing type with regard to the weekly consumption pattern.
+Second, we look at the influence of the housing type with regard to the weekly consumption pattern. This means that the number of end user per group is reduced. For example, there are only 17 end user in the EV group that lives in a town house. This lack of statistics, specially for the EV group, is reflected in the weekly patterns being more noisy. 
 #### Detached house (*enebolig*)
 [![Enebolig](/images/2021-02-01-ev-charging/weekly_averages_Enebolig_2020_centered.png)](/images/2021-02-01-ev-charging/weekly_averages_Enebolig_2020_centered.png){:target="_blank"}
 #### Semi-detached house (*tomannsbolig*)
 [![Tomannsbolig](/images/2021-02-01-ev-charging/weekly_averages_Tomannsbolig_2020_centered.png)](/images/2021-02-01-ev-charging/weekly_averages_Tomannsbolig_2020_centered.png){:target="_blank"}
-#### Townhouse (*rekkehus*) 
+#### Town house (*rekkehus*) 
 [![Rekkehus](/images/2021-02-01-ev-charging/weekly_averages_Rekkehus_2020_centered.png)](/images/2021-02-01-ev-charging/weekly_averages_Rekkehus_2020_centered.png){:target="_blank"}
 #### Apartment (*leilighet*)
 [![Leilighet](/images/2021-02-01-ev-charging/weekly_averages_Leilighet_2020_centered.png)](/images/2021-02-01-ev-charging/weekly_averages_Leilighet_2020_centered.png){:target="_blank"}
