@@ -10,6 +10,7 @@ This analysis is looking at the real consumption patterns of EV and non EV owner
 {:toc}
 
 ## Dataset
+
 The dataset gathered for this analysis is as follows: 
  - the hourly consumption (active energy, *kWh/h*) for 2020 of **181** end users that own and charge their EV at home (EV group), who answered yes to both questions above
  - the hourly consumption for 2020 of **978** end users that do not own an EV (no-EV group), who answered no to both questions above
@@ -113,7 +114,7 @@ One surprising finding is that even once the type of housing similar, we still s
 
 
 ## Conclusion
-This analysis is a tiny part of the effort Elvia is working on in order to understand and learn how our end-users consume the power we deliver them. The very recent boom of electric vehicle in Norway has modified the constraints on our grid. Understanding better these new constraints is key in order to plan, operate and maintain the electric grid of today and tomorrow.
+This analysis is part of Elvia's effort towards becoming a data-driven grid company. With the help of the AMS smart meters, we can observe the power consumption patterns of our end-users. The explosion of electric vehicles in Norway has modified these consumption patterns. Understanding better these new patterns is key in order to operate and maintain the electric grid of today and plan the grid of tomorrow.
 
 ## Appendix 
 For the ones interested, we investigated if there is need to correct the hourly consumption data for seasonal variation. In Norway, energy consumption is very correlated to exterior temperature and therefore seasonal.
