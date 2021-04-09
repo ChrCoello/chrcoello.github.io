@@ -123,11 +123,9 @@ There are many take home messages in this analysis. We showed that EV owners hav
 
 
 ## Appendix 
-For the ones interested, we investigated if there is need to correct the hourly consumption data for seasonal variation. In Norway, energy consumption is very correlated to exterior temperature and therefore seasonal.
-Our initial hypothesis was that the weekly pattern would be "more right" if using season-corrected data as source.
+For the ones interested, we investigated if there is need to correct the hourly consumption data for seasonal variation when calculating the HOBWA patterns. In Norway, energy consumption is very correlated to exterior temperature and therefore seasonal. Our initial hypothesis was that the weekly pattern would be "more right" if using season-corrected consumption data as source (when of course not investigating the influence of the season on these patterns).
 [![Fit model](/images/2021-02-01-ev-charging/fit_model_XX29.png)](/images/2021-02-01-ev-charging/fit_model_XX29.png){:target="_blank"}
 <figcaption>Figure 5. Fitting a seasonal model. Top: data and model fit. Bottom left: residuals. Bottom right: histogram of residuals.</figcaption>
 <br/>
-To test this hypothesis, we applied both cos+sin model and a [season-trend decomposition](https://www.statsmodels.org/devel/generated/statsmodels.tsa.seasonal.STL.html) using LOESS. 
-We saw very little to no change in the weekly pattern when compared to the weekly pattern with non corrected consumption data. 
+To test this hypothesis, we applied both cos+sin model and a [season-trend decomposition](https://www.statsmodels.org/devel/generated/statsmodels.tsa.seasonal.STL.html) using LOESS. We saw very little to no change in the weekly pattern when compared to the weekly pattern with non corrected consumption data. 
 
