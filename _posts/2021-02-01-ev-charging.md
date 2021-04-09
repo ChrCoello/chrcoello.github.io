@@ -115,10 +115,10 @@ One surprising finding is that even once the type of housing similar, we still s
 
 
 ## Conclusion
-There are many take home messages in this analysis. We showed that EV owners have (in average):
+There are many take home messages in this analysis. For example, we showed that EV owners have (in average):
  - higher daily max than non EV owners
  - higher afternoon peak during week days than non EV owners
- - a (possible) hint of a shift of the afternoon peak towards later hours in summer but not in winter
+ - a (possible) shift of the afternoon peak towards later hours in summer but not in winter
  Don't hesitate to contact [me](https://www.linkedin.com/in/chrcoello/){:target="_blank"} for further discussion on the topic.
 
 
