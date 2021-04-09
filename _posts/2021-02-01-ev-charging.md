@@ -118,7 +118,8 @@ One surprising finding is that even once the type of housing similar, we still s
 There are many take home messages in this analysis. We showed that EV owners have (in average):
  - higher daily max than non EV owners
  - higher afternoon peak during week days than non EV owners
- - 
+ - a (possible) hint of a shift of the afternoon peak towards later hours in summer but not in winter
+ Don't hesitate to contact [me](https://www.linkedin.com/in/chrcoello/){:target="_blank"} for further discussion on the topic.
 
 
 ## Appendix 
@@ -128,5 +129,5 @@ Our initial hypothesis was that the weekly pattern would be "more right" if usin
 <figcaption>Figure 5. Fitting a seasonal model. Top: data and model fit. Bottom left: residuals. Bottom right: histogram of residuals.</figcaption>
 <br/>
 To test this hypothesis, we applied both cos+sin model and a [season-trend decomposition](https://www.statsmodels.org/devel/generated/statsmodels.tsa.seasonal.STL.html) using LOESS. 
-We saw very little to no change in the weekly pattern when compared to the weekly pattern with raw consumption data. 
+We saw very little to no change in the weekly pattern when compared to the weekly pattern with non corrected consumption data. 
 
