@@ -1,24 +1,24 @@
 # Electric vehicles and power consumption at home -- an analysis of charging patterns in Norway in 2020
 
-As part of [Elvia](https://www.elvia.no/){:target="_blank"}'s large [pilot study on power tariff](https://www.elvia.no/effekttariff){:target="_blank"}, a survey was conducted to understand the pilot end user relationship with using and saving energy. Two questions of this survey targeted electric vehicles (EV):
- - we asked the end users if they owned an EV vehicle in 2020
- - if they did, we asked if their household was the main charging point for their car. 
-  
-This analysis is looking at the real consumption patterns of EV and non EV owners as a part of this pilot study.
+At [Elvia](https://www.elvia.no/){:target="_blank"}, we believe that data and data-driven decision making is the way forward. As data scientist, we have an important role in this process, helping the analysis of available data to generate new insights. In this blog post, by using data gathered through [smart meters](https://www.elvia.no/smart-forbruk/alt-om-din-strommaler){:target="_blank"}, we provide key visualisations to *understand what it means to charge an electric vehicle (EV) at home* in 2020: weekly patterns, comparison with household without EV, etc... The explosion of electric vehicles in Norway has modified how energy is used at home, and here we show the real changes in consumption patterns in 2020. In fine, understanding better these new charging patterns is key in order to operate and maintain the [electric grid](https://www.elvia.no/hva-er-elvia/vart-stromnett){:target="_blank"} of today and plan the grid of tomorrow.
 
 1. TOC
 {:toc}
 
 ## Dataset
 
+As part of [Elvia](https://www.elvia.no/){:target="_blank"}'s large [pilot study on power tariff](https://www.elvia.no/effekttariff){:target="_blank"}, a survey was conducted to understand the pilot end user relationship with using and saving energy. Two questions of this survey targeted electric vehicles (EV):
+ - we asked the end users if they owned an EV vehicle in 2020
+ - if they did, we asked if their household was the main charging point for their car. 
+
 The dataset gathered for this analysis is as follows: 
  - the hourly consumption (active energy, *kWh/h*) for 2020 of **181** end users that own and charge their EV at home (EV group), who answered yes to both questions above
  - the hourly consumption for 2020 of **978** end users that do not own an EV (no-EV group), who answered no to both questions above
  - the type of household these end users live in, with four categories possible: detached house (*enebolig*), semi-detached house (*tomannsbolig*), townhouse (*rekkehus*) and apartment (*leilighet*).  
 
-We filtered the hourly consumption by keeping only households where we had 99% of all hourly points available for 2020 (8696 out of 8784 data points).
+We filtered the hourly consumption to keep only households where we had 99% of all hourly consumption data points available for 2020 (8696 out of 8784).
 
-## Comparing EV and non EV-owners
+## Visualising hourly consumption in a year (2020)
 The raw data for a randomly picked end user from the no-EV group (top) and a randomly picked end user from the EV group (bottom) can be observed in Figure 1.
 <img src="/images/2021-02-01-ev-charging/example_no_ev_owner_00.png" width="800" class="center" alt="no EV group">
 <img src="/images/2021-02-01-ev-charging/example_ev_owner_00.png" width="800" class="center" alt="EV group">
@@ -114,7 +114,11 @@ One surprising finding is that even once the type of housing similar, we still s
 
 
 ## Conclusion
-This analysis is part of Elvia's effort towards becoming a data-driven grid company. With the help of the AMS smart meters, we can observe the power consumption patterns of our end-users. The explosion of electric vehicles in Norway has modified these consumption patterns. Understanding better these new patterns is key in order to operate and maintain the electric grid of today and plan the grid of tomorrow.
+There are many take home messages in this analysis. We showed that EV owners have :
+ - higher daily max than non EV owners
+ - higher afternoon peak during week days than non EV owners
+ - 
+
 
 ## Appendix 
 For the ones interested, we investigated if there is need to correct the hourly consumption data for seasonal variation. In Norway, energy consumption is very correlated to exterior temperature and therefore seasonal.
