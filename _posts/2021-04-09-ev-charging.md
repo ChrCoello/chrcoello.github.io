@@ -1,6 +1,7 @@
 # Electric vehicles and power consumption at home -- an analysis of charging patterns in Norway in 2020
 
 At [Elvia](https://www.elvia.no/){:target="_blank"}, we believe that data and data-driven decision making is the way forward. As data scientist, we have an important role in this process, helping the analysis of available data to generate new insights. In this blog post, by using data gathered through [smart meters](https://www.elvia.no/smart-forbruk/alt-om-din-strommaler){:target="_blank"}, we provide key visualisations to *understand what it means to charge an electric vehicle (EV) at home* in 2020: weekly patterns, comparison with household without EV, etc... The explosion of electric vehicles in Norway has modified how energy is used at home, and here we show the real changes in consumption patterns in 2020. In fine, understanding better these new charging patterns is key in order to operate and maintain the [electric grid](https://www.elvia.no/hva-er-elvia/vart-stromnett){:target="_blank"} of today and plan the grid of tomorrow.
+<img src="/images/2021-04-09-ev-charging/weekly_averages_2020_centred.png" alt="hidden image" hidden/>
 
 1. TOC
 {:toc}
