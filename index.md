@@ -2,4 +2,4 @@
 
 # When data meets the grid
 
-This is the personal blog post of a data scientist working at the Norwegian grid company [Elvia AS](https://www.elvia.no). In this blog, you can expect to find content related to Data Science, Python (the programing language), Machine Learning, Data Processing and certainly so more bits and pieces.  
+This is the blog post of a data scientist working at the Norwegian grid company [Elvia AS](https://www.elvia.no). In this blog, you can expect to find content related to data science, Python (the programing language), machine learning and more. All this using data from the largest distribution system operator in Norway. 
