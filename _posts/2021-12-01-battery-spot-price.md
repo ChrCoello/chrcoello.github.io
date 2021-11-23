@@ -10,7 +10,7 @@ price one pays energy to its energy provider : spot price, decided by the day-ah
 As consumer, pay it to the energy provider. Norway: Tibber, Fjordkraft, Fortum, etc...  
 
 Hourly variations in this price : hours with cheaper prices and hours with higher prices  
-[![Minimum price per day](/images/2021-12-01-battery-spot-price/minimum_spot_price_day.png) {width:200px}](/images/2021-12-01-battery-spot-price/minimum_spot_price_day.png){:target="_blank"}
+[![Minimum price per day](/images/2021-12-01-battery-spot-price/minimum_spot_price_day.png {width:200px})](/images/2021-12-01-battery-spot-price/minimum_spot_price_day.png){:target="_blank"}
 [![Maximum price per day](/images/2021-12-01-battery-spot-price/maximum_spot_price_day.png)](/images/2021-12-01-battery-spot-price/maximum_spot_price_day.png)
 <figcaption>Figure 1. TODO</figcaption>
 <br/>
