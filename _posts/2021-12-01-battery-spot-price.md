@@ -10,9 +10,9 @@ price one pays energy to its energy provider : spot price, decided by the day-ah
 As consumer, pay it to the energy provider. Norway: Tibber, Fjordkraft, Fortum, etc...  
 
 Hourly variations in this price : hours with cheaper prices and hours with higher prices  
-<img src="/images/2021-12-01-battery-spot-price/minimum_spot_price_day.png" alt="drawing" width="200" target="_blank"/>
-[![Maximum price per day](/images/2021-12-01-battery-spot-price/maximum_spot_price_day.png)](/images/2021-12-01-battery-spot-price/maximum_spot_price_day.png){:target="_blank"}
-<figcaption>Figure 1. Hourly consumption (kWh/h) of a randomly selected member of the no-EV (top) and EV (bottom) group.</figcaption>
+[![Minimum price per day](/images/2021-12-01-battery-spot-price/minimum_spot_price_day.png) {width:200px}](/images/2021-12-01-battery-spot-price/minimum_spot_price_day.png){:target="_blank"}
+[![Maximum price per day](/images/2021-12-01-battery-spot-price/maximum_spot_price_day.png)](/images/2021-12-01-battery-spot-price/maximum_spot_price_day.png)
+<figcaption>Figure 1. TODO</figcaption>
 <br/>
 
 Energy arbitrage : batteries can charge during hours with low prices and discharge during hours with high prices
@@ -36,14 +36,18 @@ Standard energy consumption of an industrial partner: (include a typical week he
 2. Variables
 
  - spot price : 
-    - $D_{min,1}$: daily minimum
-    - $D_{max,1}$: daily maximum
-    - $\Delta_1$: difference between $D_{max,1}$ and $D_{min,1}$
-    - $D_{min,3}$: average of the three minimum prices of the day
-    - $D_{max,3}$: average of the three maximum prices of the day
-    - $\Delta_3$: difference between $D_{max,3}$ and $D_{min,3}$
+    - $SP_{min,1}$: daily minimum spot price
+    - $SP_{max,1}$: daily maximum spot price
+    - $\Delta_1$: difference between $SP_{max,1}$ and $SPD_{min,1}$
+    - $SP_{min,3}$: average of the three minimum prices of the day
+    - $SP_{max,3}$: average of the three maximum prices of the day
+    - $\Delta_3$: difference between $SP_{max,3}$ and $SP_{min,3}$
  - battery : 
     - $C$: capacity
     - $\nu$: efficiency
 
 2. Energy arbitrage
+ - Cost of charging during the minimum hour(s) of the day
+$$
+cost_{ch} = SP_{min,1} \times C \times (1-\nu)
+$$
