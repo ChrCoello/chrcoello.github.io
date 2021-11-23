@@ -1,6 +1,6 @@
 # Sport price analysis in Norway in regard to energy arbitrage with batteries
 
-[Hagal](www.hagal.com)
+Analysis done at [Hagal](www.hagal.com)
 
 
 ## Intro :wink:
@@ -9,8 +9,8 @@ price one pays energy to its energy provider : spot price, decided by the day-ah
 As consumer, pay it to the energy prodvider. Norway: Tibber, Fjordkraft, Fortum, etc...
 Hourly variations in this price : hours with cheaper prices and hours with higher prices
 
-[![Minimum price per day](/images/2021-12-01-battery-spot-price/minimum_spot_price_day.png)](/images/2021-04-09-ev-charging/minimum_spot_price_day.png){:target="_blank"}
-[![Maximum price per day](/images/2021-12-01-battery-spot-price/maximum_spot_price_day.png)](/images/2021-04-09-ev-charging/maximum_spot_price_day.png){:target="_blank"}
+[![Minimum price per day](/images/2021-12-01-battery-spot-price/minimum_spot_price_day.png)](/images/2021-12-01-battery-spot-price/minimum_spot_price_day.png){:target="_blank"}
+[![Maximum price per day](/images/2021-12-01-battery-spot-price/maximum_spot_price_day.png)](/images/2021-12-01-battery-spot-price/maximum_spot_price_day.png){:target="_blank"}
 <figcaption>Figure 1. Hourly consumption (kWh/h) of a randomly selected member of the no-EV (top) and EV (bottom) group.</figcaption>
 <br/>
 
