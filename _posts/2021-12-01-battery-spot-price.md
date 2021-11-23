@@ -45,9 +45,33 @@ Standard energy consumption of an industrial partner: (include a typical week he
  - battery : 
     - $C$: capacity
     - $\nu$: efficiency
+ - building consumption : 
+    - Con_{min,1} : industry consumption during the hour of minimum price
+    - Con_{max,1} : industry consumption during the hour of maximum price
+    - Con_{min,3} : average industry consumption during the three hours of minimum price
+    - Con_{max,3} : average industry consumption during the three hours of minimum price
 
 2. Energy arbitrage
  - Cost of charging during the minimum hour(s) of the day
 $$
-cost_{ch} = SP_{min,1} \times C \times (1-\nu)
+Total_cost_{1} = Con_{min,1} + Charg_{1}
 $$
+Battery charging cost
+$$
+Charg_{1} = SP_{min,1} \times C \times (1+\nu)
+$$
+ - Cost of discharging during the maximum hour(s) of the day
+$$
+cost_{dis} = Con_{max,1} - Dis_{1}
+$$
+Battery discharging savings
+$$
+Dis_{1} = SP_{max,1} \times C \times (1-\nu)
+$$
+ - Gain. We want gain to be > 0 : 
+$$
+Gain = Dis_{1} - Charg_{1} > 0
+$$ 
+$$
+Gain = SP_{max,1} \times C \times (1-\nu) - SP_{min,1} \times C \times (1+\nu) > 0
+$$ 
