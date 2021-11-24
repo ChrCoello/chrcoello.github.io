@@ -6,7 +6,7 @@ Analysis done at [Hagal](www.hagal.com)
 ## Intro :wink:
 
 price one pays energy to its energy provider : spot price, decided by the day-ahead market at NordPool.  
-<a href="www.hagal.com"><img src="images/2021-12-01-battery-spot-price/spot_price.png" align="left" height="212" width="212" ></a>
+[![Spot price](/images/2021-12-01-battery-spot-price/spot_price.png)](/images/2021-12-01-battery-spot-price/spot_price.png){:target="_blank" :width=200px}
 
 As consumer, pay it to the energy provider. Norway: Tibber, Fjordkraft, Fortum, etc...  
 
