@@ -34,7 +34,7 @@ In addition, the grid costs are made of three parts:
  3. power part: a fee related to your maximum kW in a given period (in the case of Norway, NOK/kWh/h)
 There has been some spotlights on the third part (power part) lately as the power part is being implemented for all end users from 1st Jan 2022. How the power part is calculated is dependant on the DSO delivering electricity in your region. As an example, Elvia's power tariffs for industries looks at the maximum hourly energy (kWh/h) in a given month and uses this value to derive the cost. What this means is that one hour of very consumption can change drastically your electricity bill.
 
-This said, this analysis of energy arbitrage (EA) is focusing only on electricity cost. Nevertheless, we will see during the analysis that power tariff are important to have in mind. 
+This said, this analysis of energy arbitrage (EA) is focusing solely on electricity cost. Nevertheless, we will see during the analysis that power tariff are important to have in mind. 
 
 
 ## Variables
@@ -48,8 +48,8 @@ To answer this question, let's define some variables:
     - $SP_{max,1}$: average of the $N$ hours of maximum spot price (NOK/MWh)
  - battery : 
     - $C$: capacity available for energy arbitrage in the battery (kWh)
-    - $\lambda_{charge}$ : fraction of additional energy required to charge the battery with $C$
-    - $\lambda_{discharge}$ : fraction of energy lost when discharging $C$
+    - $\lambda_{charge}$ : fraction of additional energy required to charge the battery with $C$ (theoretically $\lambda_{charge}$ could be any positive number, in reality it is often between 0.05 and 0.3)
+    - $\lambda_{discharge}$ : fraction of energy lost when discharging $C$ (between 0 and 1, often between 0.05 and 0.3)
  - $N$ : the number of hours required to charge the battery of $C$ without increasing the power tariff
 
 
@@ -68,11 +68,11 @@ $$
 Therefore the total savings/costs (NOK) of operating the battery is: 
 $$
 \Delta_{cost,N} = SP_{max,N} \times C \times (1-\lambda_{discharge}) - SP_{min,N} \times C \times (1+\lambda_{charge})
-\frac{\Delta_{cost}}{C} = \left(SP_{max,N} \times (1-\eta_{discharge}) - SP_{min,N} \times (1+\eta_{charge})\right) 
+\frac{\Delta_{cost}}{C} = \left(SP_{max,N} \times (1-\lambda_{discharge}) - SP_{min,N} \times (1+\lambda_{charge})\right) 
 $$
 It is also interesting to have an expression independent of $C$ (NOK/MWh):
 $$
-\frac{\Delta_{cost}}{C} = \left(SP_{max,N} \times (1-\eta_{discharge}) - SP_{min,N} \times (1+\eta_{charge})\right) 
+\frac{\Delta_{cost}}{C} = \left(SP_{max,N} \times (1-\lambda_{discharge}) - SP_{min,N} \times (1+\lambda_{charge})\right) 
 $$
 
 Then we have a simple metric ($\Delta_{cost,N}$ or \frac{\Delta_{cost}}{C}) to follow : 
@@ -81,7 +81,11 @@ Then we have a simple metric ($\Delta_{cost,N}$ or \frac{\Delta_{cost}}{C}) to f
 
 ## Results
 
+The two main results are presented below in different forms. Given a charge and discharge loss fraction and a number of hours for charge of the battery (parameters $\lambda_{charge}$, $\lambda_{discharge}$ and $N$ ), the total percentage of days when the energy arbitrage is profitable is presented as an image with parameter $N$ in vertical and parameter $\lambda$ in horizontal
 
+
+The choice of N is dependant on the 
+The parameters $\lambda_{charge}$ and $\lambda_{discharge}$ are battery depedant, with conventional batteries + inverter being around 20 to 30% whereas Hagal unique technology is speced to be much lower than that.
 ## Conclusion
 
 Revenue stacking
