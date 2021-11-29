@@ -68,7 +68,6 @@ $$
 Therefore the total savings/costs (NOK) of operating the battery is: 
 $$
 \Delta_{cost,N} = SP_{max,N} \times C \times (1-\lambda_{discharge}) - SP_{min,N} \times C \times (1+\lambda_{charge})
-\frac{\Delta_{cost}}{C} = \left(SP_{max,N} \times (1-\lambda_{discharge}) - SP_{min,N} \times (1+\lambda_{charge})\right) 
 $$
 It is also interesting to have an expression independent of $C$ (NOK/MWh):
 $$
