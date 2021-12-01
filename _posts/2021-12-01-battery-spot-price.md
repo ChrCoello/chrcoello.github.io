@@ -93,6 +93,7 @@ The parameters $\lambda_{charge}$ and $\lambda_{discharge}$ are fixed and batter
 
 To get an overview of the total gains that would have been possible with a 250kWh battery charging during the minimum three hours of the day and discharging during the maximum three hours, the Table 1 summarise the results per year 
 
+
 {:class="newtable"}
 || 5% | 10% | 15% | 20% | 30% |
 |----------------------------|--------------------------|--------------------------|---------------------------|----------------------------|--------------------------|
@@ -105,6 +106,7 @@ To get an overview of the total gains that would have been possible with a 250kW
 | 2019   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
 | 2020   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
 | 2021   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
+
 <figcaption>Table 1. Gains in NOK and number of days (%) where EA was profitable in parenthesis for a 250 kWh battery pack with different charge/discharge loss levels </figcaption>
 <br/>
 
