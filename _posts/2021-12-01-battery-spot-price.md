@@ -18,7 +18,7 @@ The spot price, as shown in Figure 1 for the Oslo region (NO1), varies from hour
 <figcaption>Figure 2. Minimum (green) and maximum (violet) for each day represented as a function of time (left) or as a histogram (right) representing how often a certain hour of the day was either minimum or maximum (total number of days in this analysis: 2479)</figcaption>
 <br/>
 
-At Hagal, the discussion about using batteries to take taking advantage of this difference in price is recurrent. This use-case, called *energy arbitrage*, is simple to understand. During the cheaper hours of a day, a battery is charged at the cheaper prices. During the more expensive hours of the day, the battery is used as an energy provider, thus requiring to draw *less* energy from grid at these hours.
+At Hagal, the discussion about using batteries to take advantage of this difference in price is recurrent, either on its own or as a part of a revenue stacking scheme. This use-case, called *energy arbitrage*, is simple to understand. During the cheaper hours of a day, a battery is charged at the cheaper prices. During the more expensive hours of the day, the battery is used as an energy provider, thus requiring to draw *less* energy from grid at these hours.
 As the spot price for the next day is published around 12:45 (Europe/Oslo timezone) every day for the next day, then a simple algorithm could implement this use-case. 
 
 But how profitable is this ? This is what we try to start digging into in this analysis.
@@ -81,18 +81,37 @@ Then we have a simple metric ($\Delta_{cost,N}$ or \frac{\Delta_{cost}}{C}) to f
 
 ## Results
 
-The two main results are presented below in different forms. Given a charge and discharge loss fraction and a number of hours for charge of the battery (parameters $\lambda_{charge}$, $\lambda_{discharge}$ and $N$ ), the total percentage of days when the energy arbitrage is profitable is presented as an image with parameter $N$ in vertical and parameter $\lambda$ in horizontal
+The two main results are presented below in different forms. Given a charge and discharge loss fraction ($\lambda_{charge}$, $\lambda_{discharge}$, horizontal axis of Figure 3) and a number of hours to charge the battery ($N$, different subplots of Figure 3), the relative gain $\frac{\Delta_{cost}}{C}$ is presented in Figure 3.
 
+[![Relative gains](/images/2021-12-01-battery-spot-price/relative_gain_vs_loss.png)](/images/2021-12-01-battery-spot-price/relative_gain_vs_loss.png){:target="_blank"}
+<figcaption>Figure 3. Relative gain $\frac{\Delta_{cost}}{C}$ for different battery loss characteristics and different number of charging hours.</figcaption>
+<br/>
 
-The choice of N is dependant on the 
-The parameters $\lambda_{charge}$ and $\lambda_{discharge}$ are battery depedant, with conventional batteries + inverter being around 20 to 30% whereas Hagal unique technology is speced to be much lower than that.
+The choice of the parameter $N$ is dynamic and dependant on the size of the battery pack and the consumption patterns of the industry. Let's give an example here for an industry retail building with very flat consumption, varying from low consumption at night and 100kWh/h during the day. If such industry is acquiring a 250kWh battery pack, then it is not recommended to charge the battery in one hour as the power tariff will increase because of the battery peak during the night. Charging over the three cheapest hours (often at night, so when building consumption is low) is then the good strategy to keep the power tariff at similar levels than previously.  
+
+The parameters $\lambda_{charge}$ and $\lambda_{discharge}$ are fixed and battery-dependant, with conventional batteries + inverter being around XX to XX% whereas Hagal unique technology specification would result in a dramatic reduction of these losses.
+
+To get an overview of the total gains that would have been possible with a 250kWh battery charging during the minimum three hours of the day and discharging during the maximum three hours, the Table 1 summarise the results per year 
+
+{:class="newtable"}
+|| 5% | 10% | 15% | 20% | 30% |
+|----------------------------|--------------------------|--------------------------|---------------------------|----------------------------|--------------------------|
+| 2013   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
+| 2014   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
+| 2015   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
+| 2016   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
+| 2017   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
+| 2018   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
+| 2019   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
+| 2020   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
+| 2021   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
+<figcaption>Table 1. Gains in NOK and number of days (%) where EA was profitable in parenthesis for a 250 kWh battery pack with different charge/discharge loss levels </figcaption>
+<br/>
+
 ## Conclusion
 
-Revenue stacking
+Using energy arbitrage 
+Revenue stacking 
 
 
 
-## 8.Appendix
-- building consumption (kWh/h) : 
-    - $Con_{min,N} : average industry consumption during the $N$ hours of minimum price
-    - $Con_{max,N}$ : average industry consumption during the $N$ hours of maximum price
