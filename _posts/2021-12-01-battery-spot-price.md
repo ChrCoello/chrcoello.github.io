@@ -1,4 +1,4 @@
-# Sport price analysis in Norway in regard to energy arbitrage using batteries
+# Spot price analysis in Norway in regard to energy arbitrage using batteries
 
 This technical analysis done at [Hagal](www.hagal.com) presents some data-driven reflections on the feasibility of energy arbitrage using batteries. 
 
@@ -69,6 +69,7 @@ Therefore the total savings/costs (NOK) of operating the battery is:
 $$
 \Delta_{cost,N} = SP_{max,N} \times C \times (1-\lambda_{discharge}) - SP_{min,N} \times C \times (1+\lambda_{charge})
 $$
+
 It is also interesting to have an expression independent of $C$ (NOK/MWh):
 $$
 \frac{\Delta_{cost}}{C} = \left(SP_{max,N} \times (1-\lambda_{discharge}) - SP_{min,N} \times (1+\lambda_{charge})\right) 
