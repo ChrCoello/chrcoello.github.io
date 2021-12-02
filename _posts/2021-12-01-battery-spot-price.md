@@ -97,15 +97,15 @@ To get an overview of the total gains that would have been possible with a 250kW
 {:class="newtable"}
 || 5% | 10% | 15% | 20% | 30% |
 |----------------------------|--------------------------|--------------------------|---------------------------|----------------------------|--------------------------|
-| 2013   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
-| 2014   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
-| 2015   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
-| 2016   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
-| 2017   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
-| 2018   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
-| 2019   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
-| 2020   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
-| 2021   | XXX (YY%) | XXX (YY%) |	XXX (YY%)  | XXX (YY%) | XXX (YY%) |
+| 2013   | 2308 nok (70%)  | 1315 nok (33%)  | 802 nok (18%)   | 480 nok (12%)   | 82 nok (6%)  | 
+| 2014   | 1380 nok (61%)  | 775 nok (22%)   | 540 nok (10%)   | 393 nok (8%)    | 182 nok (5%)  | 
+| 2015   | 2698 nok (91%)  | 1823 nok (61%)  | 1296 nok (44%)  | 916 nok (34%)   | 400 nok (21%)  | 
+| 2016   | 4664 nok (82%)  | 3482 nok (52%)  | 2679 nok (33%)  | 2087 nok (23%)  | 1236 nok (11%)  | 
+| 2017   | 2281 nok (67%)  | 1403 nok (31%)  | 936 nok (17%)   | 649 nok (11%)   | 306 nok (6%)  | 
+| 2018   | 5430 nok (91%)  | 3377 nok (55%)  | 2267 nok (33%)  | 1537 nok (22%)  | 807 nok (10%)  |
+| 2019   | 2364 nok (76%)  | 1057 nok (31%)  | 493 nok (13%)   | 233 nok (5%)    | 37 nok (1%)  | 
+| 2020   | 1760 nok (85%)  | 1295 nok (58%)  | 999 nok (38%)   | 813 nok (26%)   | 534 nok (14%)  |
+| 2021   | 10591 nok (84%) | 7784 nok (59%)  | 5815 nok (43%)  | 4363 nok (34%)  | 2414 nok (17%)  | 
 
 <figcaption>Table 1. Gains in NOK and number of days (%) where EA was profitable in parenthesis for a 250 kWh battery pack with different charge/discharge loss levels </figcaption>
 <br/>
