@@ -91,7 +91,7 @@ The choice of the parameter $N$ is dynamic and dependant on the size of the batt
 
 The parameters $\lambda_{charge}$ and $\lambda_{discharge}$ are fixed and battery-dependant, with conventional batteries + inverter being around XX to XX% whereas Hagal unique technology specification would result in a dramatic reduction of these losses.
 
-To get an overview of the total gains that would have been possible with a 250kWh battery charging during the minimum three hours of the day and discharging during the maximum three hours, the Table 1 summarise the results per year 
+To get an overview of the total gains that would have been possible with a 250kWh battery charging during the minimum three hours of the day and discharging during the maximum three hours, the Table 1 summarize the results per year 
 
 
 {:class="newtable"}
