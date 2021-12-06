@@ -18,8 +18,9 @@ The spot price, as shown in Figure 1 for the Oslo region (NO1), varies from hour
 <figcaption>Figure 2. Minimum (green) and maximum (violet) for each day represented as a function of time (left) or as a histogram (right) representing how often a certain hour of the day was either minimum or maximum (total number of days in this analysis: 2479)</figcaption>
 <br/>
 
-At Hagal, the discussion about using batteries to take advantage of this difference in price is recurrent, either on its own or as a part of a revenue stacking scheme. This use-case, called *energy arbitrage*, is simple to understand. During the cheaper hours of a day, a battery is charged at the cheaper prices. During the more expensive hours of the day, the battery is used as an energy provider, thus requiring to draw *less* energy from grid at these hours.
-As the spot price for the next day is published around 12:45 (Europe/Oslo timezone) every day for the next day, then a simple algorithm could implement this use-case. 
+At Hagal, the discussion about using batteries to take advantage of this difference in price is recurrent. This use-case, called *energy arbitrage*, is simple to understand. During the cheaper hours of a day, a battery is charged at the cheaper prices. During the more expensive hours of the day, the battery is used as an energy provider, thus requiring to draw *less* energy from grid at these hours. As the spot price for the next day is published around 12:45 (Europe/Oslo timezone) every day for the next day, then a simple algorithm could implement this use-case. 
+
+Energy arbitrage, on its own, has been shown not to be profitable in the past years for existing batteries. Therefore at Hagal we believe that batteries should always be thought as multi-revenue source by implementing [revenue stacking](https://mugrid.com/battery-revenue-stacking/) schemes using optimization algorithms. A revenue stacking scheme we often encounter is the combination of the following three use cases: increase PV self consumption, peak shaving and energy arbitrage. By using forecasting algorithm and knowledge about spot prices, optimisation of battery use in regard to these three use-cases is feasible.
 
 But how profitable is this ? This is what we try to start digging into in this analysis.
 
@@ -91,29 +92,34 @@ The choice of the parameter $N$ is dynamic and dependant on the size of the batt
 
 The parameters $\lambda_{charge}$ and $\lambda_{discharge}$ are fixed and battery-dependant, with conventional batteries + inverter being around XX to XX% whereas Hagal unique technology specification would result in a dramatic reduction of these losses.
 
-To get an overview of the total gains that would have been possible with a 250kWh battery charging during the minimum three hours of the day and discharging during the maximum three hours, the Table 1 summarize the results per year 
+The Table 1 summarizes the total gains per year that would have been possible with a 250kWh battery with 5% charge/discharge loss.  
 
 
 {:class="newtable"}
 || 5% | 10% | 15% | 20% | 30% |
 |----------------------------|--------------------------|--------------------------|---------------------------|----------------------------|--------------------------|
-| 2013   | 2308 nok (70%)  | 1315 nok (33%)  | 802 nok (18%)   | 480 nok (12%)   | 82 nok (6%)  | 
-| 2014   | 1380 nok (61%)  | 775 nok (22%)   | 540 nok (10%)   | 393 nok (8%)    | 182 nok (5%)  | 
-| 2015   | 2698 nok (91%)  | 1823 nok (61%)  | 1296 nok (44%)  | 916 nok (34%)   | 400 nok (21%)  | 
-| 2016   | 4664 nok (82%)  | 3482 nok (52%)  | 2679 nok (33%)  | 2087 nok (23%)  | 1236 nok (11%)  | 
-| 2017   | 2281 nok (67%)  | 1403 nok (31%)  | 936 nok (17%)   | 649 nok (11%)   | 306 nok (6%)  | 
-| 2018   | 5430 nok (91%)  | 3377 nok (55%)  | 2267 nok (33%)  | 1537 nok (22%)  | 807 nok (10%)  |
-| 2019   | 2364 nok (76%)  | 1057 nok (31%)  | 493 nok (13%)   | 233 nok (5%)    | 37 nok (1%)  | 
-| 2020   | 1760 nok (85%)  | 1295 nok (58%)  | 999 nok (38%)   | 813 nok (26%)   | 534 nok (14%)  |
-| 2021   | 10591 nok (84%) | 7784 nok (59%)  | 5815 nok (43%)  | 4363 nok (34%)  | 2414 nok (17%)  | 
+| 2013 | 2308 nok (70%)  | 1315 nok (33%)  | 802 nok (18%)  | 480 nok (12%)  | 82 nok (6%)  | 
+| 2014 | 1380 nok (61%)  | 775 nok (22%)  | 540 nok (10%)  | 393 nok (8%)  | 182 nok (5%)  | 
+| 2015 | 2698 nok (91%)  | 1823 nok (61%)  | 1296 nok (44%)  | 916 nok (34%)  | 400 nok (21%)  |
+| 2016 | 4664 nok (82%)  | 3482 nok (52%)  | 2679 nok (33%)  | 2087 nok (23%)  | 1236 nok (11%)  | 
+| 2017 | 2281 nok (67%)  | 1403 nok (31%)  | 936 nok (17%)  | 649 nok (11%)  | 306 nok (6%)  | 
+| 2018 | 5430 nok (91%)  | 3377 nok (55%)  | 2267 nok (33%)  | 1537 nok (22%)  | 807 nok (10%)  | 
+| 2019 | 2364 nok (76%)  | 1057 nok (31%)  | 493 nok (13%)  | 233 nok (5%)  | 37 nok (1%)  | 
+| 2020 | 1760 nok (85%)  | 1295 nok (58%)  | 999 nok (38%)  | 813 nok (26%)  | 534 nok (14%)  | 
+| 2021 | 12949 nok (85%) | 9707 nok (61%)  | 7383 nok (44%)  | 5615 nok (35%)  | 3079 nok (19%)  | 
 
-<figcaption>Table 1. Gains in NOK and number of days (%) where EA was profitable in parenthesis for a 250 kWh battery pack with different charge/discharge loss levels </figcaption>
+<figcaption>Table 1. Gains in NOK (number of days in % where EA was profitable) for a 250 kWh battery pack with different charge/discharge loss levels </figcaption>
+<br/>
+
+Finally, the Figure 4. shows an overlay of the average monthly spot price and the total gains per month for a 250kWh battery with 5% charge/discharge loss.
+
+[![Summary graph](/images/2021-12-01-battery-spot-price/summary_graph_spot_price_EA_gains.png)](/images/2021-12-01-battery-spot-price/summary_graph_spot_price_EA_gains.png){:target="_blank"}
+<figcaption>Figure 4. Average monthly spot price and the total gains per month for a 250kWh battery with 5% charge/discharge loss.</figcaption>
 <br/>
 
 ## Conclusion
 
-Using energy arbitrage 
-Revenue stacking 
+This analysis looks at the relationship between spot price, battery efficiency and energy arbitrage. As spot prices increased dramatically the last months, we see that energy arbitrage gains have also increased. As battery technology is evolving and battery efficiency is getting better, energy arbitrage starts to be a relevant use-case in the revenue stack of your battery park. If you are interested in discussing this topic, or apply this analysis for other regions, please don't hesitate to [contact us](https://www.hagal.com/contact/).
 
 
 
