@@ -1,4 +1,4 @@
-<img src="/images/white.PNG" width="800" class="center">
+<img src="/images/white.png" width="800" class="center">
 
 # Shepherding data in an energy centric world
 
