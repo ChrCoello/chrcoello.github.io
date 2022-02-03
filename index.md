@@ -1,4 +1,4 @@
-<img src="/images/pxfuel.com.jpg" width="800" class="center" alt="Grid and Data">
+<img src="/images/welcome_img.PNG" width="800" class="center" alt="Grid and Data">
 
 # Shepherding data in an energy centric world
 
