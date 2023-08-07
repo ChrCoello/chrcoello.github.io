@@ -119,7 +119,7 @@ Finally, as one can have expected, we see in Figure 4. a good correlation betwee
 
 ## Conclusion
 
-This analysis looks at the relationship between spot price, battery efficiency and energy arbitrage. As spot prices increased dramatically the last months, we see that energy arbitrage gains have also increased. As battery technology is evolving and battery efficiency is getting better, energy arbitrage starts to be a relevant use-case in the revenue stack scheme of your battery park. If you are interested in discussing this topic, or apply this analysis for other regions, please don't hesitate to [contact us](https://www.hagal.com/contact/). Period.
+This analysis looks at the relationship between spot price, battery efficiency and energy arbitrage. As spot prices increased dramatically the last months, we see that energy arbitrage gains have also increased. As battery technology is evolving and battery efficiency is getting better, energy arbitrage starts to be a relevant use-case in the revenue stack scheme of your battery park. If you are interested in discussing this topic, or apply this analysis for other regions, please don't hesitate to [contact us](https://www.hagal.com/contact/).
 
 
 
