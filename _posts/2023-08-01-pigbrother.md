@@ -4,11 +4,11 @@ In this entry, I'll summarise the technical choices done for the project Genes2B
 
 ## Research project: Genes2Behave
 
-[![G2B](/images/2023-09-01-pigbrother/general_project_objectives_wo_compression.png)](/images/2023-09-01-pigbrother/general_project_objectives_wo_compression.png){:target="_blank" :width=200px}
+[![G2B](/images/2023-08-01-pigbrother/general_project_objectives_wo_compression.png)](/images/2023-09-01-pigbrother/general_project_objectives_wo_compression.png){:target="_blank" :width=200px}
 <figcaption>Figure 1. Schematic of the Genes2Behave project</figcaption>
 <br/>
 
-[![Phenotype extraction](/images/2023-09-01-pigbrother/20230803_high_level_workflow_g2b.png)](/images/2023-09-01-pigbrother/20230803_high_level_workflow_g2b.png){:target="_blank" :width=200px}
+[![Phenotype extraction](/images/2023-08-01-pigbrother/20230803_high_level_workflow_g2b.png)](/images/2023-09-01-pigbrother/20230803_high_level_workflow_g2b.png){:target="_blank" :width=200px}
 <figcaption>Figure 2. Phenotpe extraction - two parallel routes</figcaption>
 <br/>
 
