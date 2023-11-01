@@ -1,6 +1,6 @@
 # PigBrother: getting behavioural information from housed animal videos
 
-In this entry, I'll summarise the technical choices done for the project Genes2Behave at [Norsvin](www.norsvin.no/en). It might be technical in some parts, and not so technical in others. Just feel free to contact me (LinkedIn) if you would like to discuss this further. 
+In this entry, I'll summarise the technical choices done for the project Genes2Behave at [Norsvin](www.norsvin.no/en). It might be technical in some parts, and not so technical in others. Just feel free to contact me [LinkedIn](https://www.linkedin.com/in/chrcoello/) if you would like to discuss this further. 
 
 ## Research project: Genes2Behave
 
@@ -12,10 +12,14 @@ In this entry, I'll summarise the technical choices done for the project Genes2B
 <figcaption>Figure 2. Phenotpe extraction - two parallel routes</figcaption>
 <br/>
 
+## Video acquisition
+In total 18 cameras were installed, with a range of brand (Hikvision, Lorex), geometry (top/down, angle from the wall) and resolution (1920x1080)
+
+
 
 ## Pig detection
 
-### Dataset
+### Annotated Dataset
 
 ### Model architecture: YOLOv8
 
@@ -38,5 +42,7 @@ In this entry, I'll summarise the technical choices done for the project Genes2B
 ### Using feed data to identify animals
 
 ### Using eartags to identify animals
+
+### Using both
 
 ## Conclusion
