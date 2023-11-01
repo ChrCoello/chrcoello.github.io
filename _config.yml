@@ -26,13 +26,15 @@ use_math: True
 google_analytics:
 
 # Everything below here can be ignored, unless you want to change the theme entirely
-theme: minima
+#theme: minima
+remote_theme: pages-themes/midnight@v0.2.0
 
 plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-octicons
   - jekyll-github-metadata
+  - jekyll-remote-theme # add this line to the plugins list if you already have one
   - jemoji
 
 titles_from_headings:
